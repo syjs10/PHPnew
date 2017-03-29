@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-10 18:02:28
+/* Smarty version 3.1.30, created on 2017-03-28 10:50:54
   from "/var/www/html/Plantform/application/views/login/teacherPage.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_589d8fb4598465_26517348',
+  'unifunc' => 'content_58d9cf8e187707_38196651',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14902e24226d01f6048b9872dfba84765b339052' => 
     array (
       0 => '/var/www/html/Plantform/application/views/login/teacherPage.html',
-      1 => 1486720933,
+      1 => 1490669394,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_589d8fb4598465_26517348 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d9cf8e187707_38196651 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1424885684589d8fb458d6d5_00485641', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_62018029158d9cf8e181298_46753669', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1189205175589d8fb45951e7_74110953', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_124177564158d9cf8e186c32_65704200', 'body');
 }
 /* {block 'head'} */
-class Block_1424885684589d8fb458d6d5_00485641 extends Smarty_Internal_Block
+class Block_62018029158d9cf8e181298_46753669 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -75,7 +75,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_1189205175589d8fb45951e7_74110953 extends Smarty_Internal_Block
+class Block_124177564158d9cf8e186c32_65704200 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -90,7 +90,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 				<div class="row" style="width: 100%;height: 30%;padding: 0px;margin: 0px;background-color: #CCC;">
 					<div class="cnt">
 						<div class="wel">
-							欢迎您, <?php echo $_smarty_tpl->tpl_vars['username']->value;?>
+							欢迎您, <?php echo $_smarty_tpl->tpl_vars['teacher_name']->value;?>
 
 						</div>
 						<ul class="nav nav-pills">
@@ -103,7 +103,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 					<li role="presentation" onclick="changePage('../teacher_action/addcourse');" onfocus="javascript:this.className='active';" class="">
 						<a href="#">添加课程</a>
 					</li>
-					<li role="presentation" onclick="changePage('test1.html');" onfocus="javascript:this.className='active';" class="">
+					<li role="presentation" onclick="changePage('../teacher_action/test');" onfocus="javascript:this.className='active';" class="">
 						<a href="#" >test1</a>
 					</li>
 					<li role="presentation" onclick="" class="" tabindex="-1" onfocus="javascript:this.className='active';" onblur="javascript:this.className='';">
