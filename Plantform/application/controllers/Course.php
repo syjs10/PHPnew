@@ -18,6 +18,9 @@
 			$course_info = $this->course_model->get_course();
 			foreach ($course_info as $key => $value) {
 				$course_info[$key]['img_path']=base_url("../src/{$value['img_path']}");
+				if (mb_strlen($value['course_introduction'])>=38) {
+					$course_info[$key]['course_introduction']=mb_substr($value['course_introduction'],0,38)."...";
+				}
 			}
 			// print_r($course_info);
 			$this->ci_smarty->assign('course_info', $course_info);

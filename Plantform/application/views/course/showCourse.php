@@ -12,6 +12,8 @@
 		height: 250px;
 		padding: 2%;
 		text-align:center;
+		background-color: #fff;
+		z-index: 100;
 	}
 	.inner{
 		width:100%;
@@ -48,19 +50,37 @@
 		text-align:center;
 		position: relative;
 		top:12px;	
-		overflow-y:auto; 
+		overflow-y:hidden; 
 		/*display: none;*/
-		height:15%;
+		height:45%;
 		width: 90%;
 	}
+	.text{
+		/*background-color: #fff;*/
+		height: 60%;
+		z-index: 0;
+	}
+	.text:hover{
 
+	}
 	.teacher{
 		margin:0 auto;
 		text-align:center;
 		position: absolute;
 		bottom:15px;
 		right:20px;
+		
+		display: none;
 	}
+	/*.cover{
+		position: absolute;
+		bottom: 6%;
+		width: 95.8%;
+		height:24%;
+		background-color: #fff;
+		z-index: 1000;
+		/*display: none;*/
+	}*/
 </style>
 <{/block}>
 <{block name=body}>
@@ -76,16 +96,19 @@
 									<div class="image">
 										<img src="<{$value['img_path']}>" alt="" width="100%" height="100%">
 									</div>
-									<div class="name">
-										<{$value['course_name']}>
-									</div>
-									<div class="introduction" style=" ">
-										<{$value['course_introduction']}>
+									<div class="text">
+										<div class="name">
+											<{$value['course_name']}>
+										</div>
+										<div class="introduction">
+											<{$value['course_introduction']}>
+										</div>
 									</div>
 									<div class="teacher">
 										教师：<{$value['teacher_name']}>
 									</div>
-									
+									<div class="cover">
+									</div>
 								</div>	
 							</div>
 						<{/foreach}>	
