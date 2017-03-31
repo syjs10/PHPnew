@@ -4,13 +4,61 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="bootstrap/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		/*div{
+			height: 15px;
+			border: 1px solid #ccc;
+		}*/
+	</style>
 </head>
 <body>
-	<form action="doUpload.php" method="post" enctype="multipart/form-data">
-		<input type="file" name="myfile">
-		<br>
-		<input type="submit" value="提交">
-	</form>
+	<div class="container">
+		<div class="row"></div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading">添加课程</div>
+					<div class="panel-body">
+
+						<form action="doUpload.php" method="post" class="form-horizontal" enctype="multipart/form-data">
+							<div class="form-group form-group-sm">
+								<label class="col-md-2 control-label" for="class_name" >课程名称</label>
+								<div class="col-md-6">
+									<input type="text" class="form-control" name="class_name">
+								</div>
+								<span class="help-block">test</span>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="class_introduction" >课程简介</label>
+								<div class="col-md-6">
+									<textarea class="form-control" name="class_introduction" rows="4"></textarea>
+								</div>
+								<span class="help-block">test</span>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-md-2 control-label" for="myfile" >课程封面</label>
+								<div class="col-md-6">
+									<input type="file" class=""  name="myfile">
+								</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<div class="col-md-2"></div>
+								<div class="col-md-6">
+									<input type="submit" class="btn btn-default" value="提交">
+								</div>
+							</div>
+						</form>						
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="row"></div>
+	</div>
+
 </body>
 </html>
