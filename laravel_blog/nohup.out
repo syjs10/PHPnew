@@ -1,0 +1,36 @@
+Laravel development server started: <http://127.0.0.1:8000>
+[Tue Apr  4 21:57:16 2017] 127.0.0.1:55418 [200]: /favicon.ico
+[Tue Apr  4 21:57:25 2017] 127.0.0.1:55434 [200]: /favicon.ico
+[Tue Apr  4 21:58:14 2017] 127.0.0.1:55438 Invalid request (Unexpected EOF)
+[Tue Apr  4 21:58:14 2017] 127.0.0.1:55442 Invalid request (Unexpected EOF)
+[Tue Apr  4 21:59:13 2017] 127.0.0.1:55468 [200]: /favicon.ico
+[Tue Apr  4 21:59:14 2017] 127.0.0.1:55476 [200]: /favicon.ico
+[Tue Apr  4 21:59:14 2017] 127.0.0.1:55484 [200]: /favicon.ico
+[Tue Apr  4 21:59:33 2017] 127.0.0.1:55488 Invalid request (Unexpected EOF)
+[Tue Apr  4 22:00:02 2017] 127.0.0.1:55506 [200]: /favicon.ico
+[Tue Apr  4 22:00:14 2017] 127.0.0.1:55510 Invalid request (Unexpected EOF)
+[Tue Apr  4 22:00:14 2017] 127.0.0.1:55520 [200]: /favicon.ico
+[Tue Apr  4 22:00:15 2017] 127.0.0.1:55528 [200]: /favicon.ico
+[Tue Apr  4 22:00:15 2017] 127.0.0.1:55536 [200]: /favicon.ico
+[Tue Apr  4 22:00:15 2017] 127.0.0.1:55544 [200]: /favicon.ico
+[Tue Apr  4 22:00:51 2017] 127.0.0.1:55548 Invalid request (Unexpected EOF)
+[Tue Apr  4 22:00:51 2017] 127.0.0.1:55564 [200]: /favicon.ico
+[Tue Apr  4 22:00:52 2017] 127.0.0.1:55572 [200]: /favicon.ico
+[Tue Apr  4 22:00:52 2017] 127.0.0.1:55580 [200]: /favicon.ico
+[Tue Apr  4 22:01:37 2017] 127.0.0.1:55584 Invalid request (Unexpected EOF)
+[Tue Apr  4 22:01:37 2017] 127.0.0.1:55596 [200]: /favicon.ico
+[Tue Apr  4 22:04:09 2017] 127.0.0.1:55600 Invalid request (Unexpected EOF)
+[Tue Apr  4 22:13:14 2017] 127.0.0.1:58164 [200]: /favicon.ico
+[Tue Apr  4 22:13:16 2017] 127.0.0.1:58172 [200]: /favicon.ico
+[Tue Apr  4 22:13:31 2017] 127.0.0.1:58176 Invalid request (Unexpected EOF)
+[Tue Apr  4 22:13:43 2017] 127.0.0.1:58190 [200]: /favicon.ico
+[Tue Apr  4 22:13:43 2017] 127.0.0.1:58198 [200]: /favicon.ico
+[Tue Apr  4 22:13:45 2017] 127.0.0.1:58208 [200]: /favicon.ico
+[Tue Apr  4 22:13:47 2017] 127.0.0.1:58214 [200]: /favicon.ico
+[Tue Apr  4 22:14:15 2017] 127.0.0.1:58218 Invalid request (Unexpected EOF)
+[Tue Apr  4 22:14:15 2017] 127.0.0.1:58222 Invalid request (Unexpected EOF)
+[Tue Apr  4 22:14:15 2017] 127.0.0.1:58228 [200]: /favicon.ico
+[Tue Apr  4 22:14:15 2017] 127.0.0.1:58236 [200]: /favicon.ico
+[Tue Apr  4 22:14:17 2017] 127.0.0.1:58240 [200]: /favicon.ico
+[Tue Apr  4 22:24:04 2017] 127.0.0.1:58340 [200]: /favicon.ico
+[Tue Apr  4 22:24:06 2017] 127.0.0.1:58348 [200]: /favicon.ico
