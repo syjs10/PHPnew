@@ -17,5 +17,12 @@ CREATE TABLE course(
 	teacher_id INT NOT NULL,
 	FOREIGN KEY (teacher_id) REFERENCES teacher(teacher_id)
 ) ENGINE=INNODB;
-INSERT INTO teacher (username, password, teacher_name) 
-	VALUES ('test', '098f6bcd4621d373cade4e832627b4f6', 'admin');
+CREATE TABLE experiment(
+	exp_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	exp_name VARCHAR(50) NOT NULL,
+	exp_doc_path VARCHAR(300) NOT NULL,
+	course_id INT NOT NULL,
+	FOREIGN KEY (course_id) REFERENCES course(course_id)
+) ENGINE=INNODB;
+-- INSERT INTO teacher (username, password, teacher_name) 
+-- 	VALUES ('test', '098f6bcd4621d373cade4e832627b4f6', 'admin');
