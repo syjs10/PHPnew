@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-11 22:06:04
+/* Smarty version 3.1.30, created on 2017-04-13 21:40:49
   from "/var/www/html/Plantform/application/views/course/showAllCourse.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58ece2ccbde8c7_19593201',
+  'unifunc' => 'content_58ef7fe14d2445_16867980',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df0d00b336716331f46f99139284cf0ff8d8ee77' => 
     array (
       0 => '/var/www/html/Plantform/application/views/course/showAllCourse.php',
-      1 => 1491919556,
+      1 => 1492090847,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58ece2ccbde8c7_19593201 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58ef7fe14d2445_16867980 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_189266830658ece2ccbd1327_00507465', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_191704136058ef7fe14cdfa7_15022657', 'head');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_55618242258ece2ccbddcd4_98883692', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_149379969558ef7fe14d1d13_58460577', 'body');
 }
 /* {block 'head'} */
-class Block_189266830658ece2ccbd1327_00507465 extends Smarty_Internal_Block
+class Block_191704136058ef7fe14cdfa7_15022657 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -55,7 +55,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 		width:100%;
 		height:100%; 
 		border: 1px solid #ddd;
-		box-shadow: 0px 0px 5px #ccc;
+		
 		
 	}
 	.inner:hover{
@@ -63,7 +63,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 	}
 	.image{
 		position: relative;
-		box-shadow: 0px 0px 10px #ccc;
+		border-bottom: 1px solid #ddd; 
 		height: 55%;
 		width: 100%;
 		margin:0 auto;
@@ -72,6 +72,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 		height: 100%;
 		width: 100%;
 	}
+
 	.name{
 		margin:0 auto;
 		text-align:center;
@@ -121,15 +122,15 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_55618242258ece2ccbddcd4_98883692 extends Smarty_Internal_Block
+class Block_149379969558ef7fe14d1d13_58460577 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<?php
@@ -172,7 +173,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2"></div>
+			<div class="col-md-1"></div>
 		</div>
 	</div>
 	

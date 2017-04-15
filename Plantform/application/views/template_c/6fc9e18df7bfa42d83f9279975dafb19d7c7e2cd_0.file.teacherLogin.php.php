@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-06 16:49:29
+/* Smarty version 3.1.30, created on 2017-04-13 19:08:42
   from "/var/www/html/Plantform/application/views/login/teacherLogin.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_589838997a9fd8_02035675',
+  'unifunc' => 'content_58ef5c3a63fee6_32245812',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6fc9e18df7bfa42d83f9279975dafb19d7c7e2cd' => 
     array (
       0 => '/var/www/html/Plantform/application/views/login/teacherLogin.php',
-      1 => 1486370946,
+      1 => 1492081714,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_589838997a9fd8_02035675 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58ef5c3a63fee6_32245812 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_133936787358983899799268_48640025', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_196089375958ef5c3a6388e6_12955265', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_66261977589838997a5875_66706182', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_61839532858ef5c3a63df49_38605591', 'body');
 }
 /* {block 'head'} */
-class Block_133936787358983899799268_48640025 extends Smarty_Internal_Block
+class Block_196089375958ef5c3a6388e6_12955265 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -95,7 +95,7 @@ image/login_background.jpg') no-repeat;
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_66261977589838997a5875_66706182 extends Smarty_Internal_Block
+class Block_61839532858ef5c3a63df49_38605591 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -123,7 +123,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         <div class="form-group" >
                               <label for="Password" class="col-md-3">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
                               <div class="col-md-9">
-                                    <input type="text" name="password" style=""class="form-control input" placeholder="PassWord">
+                                    <input type="password" name="password" style=""class="form-control input" placeholder="PassWord">
                               </div>
                         </div>
                         <div class="form-group" >

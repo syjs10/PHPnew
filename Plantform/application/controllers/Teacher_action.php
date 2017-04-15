@@ -16,11 +16,11 @@
 			$this->ci_smarty->display('template/header.tpl');
 			$this->ci_smarty->display($page);
 		}
-		function addcourse() {
-			$this->ci_smarty->assign('form', form_open('teacher_action/doadd',"enctype='multipart/form-data', class='form-horizontal'"));
-			$this->display('teacher/addcourse.php');			
+		public function addCourse() {
+			$this->ci_smarty->assign('form', form_open('teacher_action/doAddCourse',"enctype='multipart/form-data', class='form-horizontal'"));
+			$this->display('course/addCourse.php');			
 		}
-		function doadd() {
+		public function doAddCourse() {
 			// print_r($_FILES);
 			$this->form_validation->set_rules('course_name','课程名称', 'required');
 			$this->form_validation->set_rules('course_introduction','课程介绍','required');
@@ -28,15 +28,39 @@
 			{
 				$this->load->library('upload_file');
 				$test = $this->upload_file->do_img_upload();
-				$this->load->model('addcourse_model');
-				$result = $this->addcourse_model->save_course($test);
+				$this->load->model('course_model');
+				$result = $this->course_model->save_course($test);
 				if ($result==true) {
 					echo "ok";
 				} else {
 					echo "no";
 				}
-				// $this->load->helper('html');
-				// echo img(base_url("../".$test));
+				
+			}else{
+				echo "row";
+			}
+
+		}
+		public function addExperiment($course_id) {
+			$this->ci_smarty->assign('form', form_open('teacher_action/doAddExperiment',"enctype='multipart/form-data', class='form-horizontal'"));
+			$this->ci_smarty->assign('course_id', $course_id);
+			$this->display('course/addExperiment.php');			
+			
+ 		}
+		public function doAddExperiment() {
+			$this->form_validation->set_rules('exp_name','实验名称', 'required');
+			if ($this->form_validation->run() == TRUE)
+			{
+				$this->load->library('upload_file');
+				$test = $this->upload_file->do_doc_upload();
+				$this->load->model('experiment_model');
+				$result = $this->experiment_model->save_exp($test);
+				if ($result==true) {
+					echo "ok";
+				} else {
+					echo "no";
+				}
+
 				
 			}else{
 				echo "row";

@@ -19,7 +19,7 @@
 		width:100%;
 		height:100%; 
 		border: 1px solid #ddd;
-		box-shadow: 0px 0px 5px #ccc;
+		
 		
 	}
 	.inner:hover{
@@ -27,7 +27,7 @@
 	}
 	.image{
 		position: relative;
-		box-shadow: 0px 0px 10px #ccc;
+		border-bottom: 1px solid #ddd; 
 		height: 55%;
 		width: 100%;
 		margin:0 auto;
@@ -36,6 +36,7 @@
 		height: 100%;
 		width: 100%;
 	}
+
 	.name{
 		margin:0 auto;
 		text-align:center;
@@ -84,8 +85,8 @@
 <{block name=body}>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<{foreach from=$course_info item=value}>
@@ -113,7 +114,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2"></div>
+			<div class="col-md-1"></div>
 		</div>
 	</div>
 	

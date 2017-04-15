@@ -77,7 +77,7 @@
                         <div class="form-group" >
                               <label for="Password" class="col-md-3">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
                               <div class="col-md-9">
-                                    <input type="text" name="password" style=""class="form-control input" placeholder="PassWord">
+                                    <input type="password" name="password" style=""class="form-control input" placeholder="PassWord">
                               </div>
                         </div>
                         <div class="form-group" >

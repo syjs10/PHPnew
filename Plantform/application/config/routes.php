@@ -53,5 +53,5 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['tlog'] = 'login/showTeacherLogin';
-$route['all_course'] = 'course/show_all_course';
-$route['course/(:num)'] = 'course/show_course/$1';
+$route['all_course'] = 'course/showAllCourse';
+$route['course/(:num)'] = 'course/showCourse/$1';
