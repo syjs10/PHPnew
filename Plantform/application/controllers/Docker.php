@@ -52,10 +52,10 @@ class Docker extends CI_Controller{
         /**
          * 防止重复开启虚拟机
          */
-        if (isset($_SESSION['docker_info'])){
-            return $_SESSION['docker_info']['port'];
-            exit;
-        }
+        // if (isset($_SESSION['docker_info'])){
+        //     return $_SESSION['docker_info']['port'];
+        //     exit;
+        // }
         /**
          * 判断端口是否占用
          * @var [type]
@@ -66,7 +66,6 @@ class Docker extends CI_Controller{
         }
         // $command = "docker run -d -p ".$port.":80 dorowu/ubuntu-desktop-lxde-vnc";
         $command = "docker run -d -p ".$port.":80 test:v1";
-        
         $output  = exec($command, $arr);
         $output  = substr($output, 0, 12);
         $docker_info = array(

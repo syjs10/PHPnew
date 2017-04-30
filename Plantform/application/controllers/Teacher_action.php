@@ -1,9 +1,9 @@
-<?php  
+<?php
 	/**
 	* 
 	*/
 	class Teacher_action extends CI_Controller {
-		
+
 		function __construct() {
 			parent::__construct();
 			$this->load->helper('url');
@@ -18,7 +18,7 @@
 		}
 		public function addCourse() {
 			$this->ci_smarty->assign('form', form_open('teacher_action/doAddCourse',"enctype='multipart/form-data', class='form-horizontal'"));
-			$this->display('course/addCourse.php');			
+			$this->display('course/addCourse.php');
 		}
 		public function doAddCourse() {
 			// print_r($_FILES);
@@ -35,7 +35,6 @@
 				} else {
 					echo "no";
 				}
-				
 			}else{
 				echo "row";
 			}
@@ -44,8 +43,7 @@
 		public function addExperiment($course_id) {
 			$this->ci_smarty->assign('form', form_open('teacher_action/doAddExperiment',"enctype='multipart/form-data', class='form-horizontal'"));
 			$this->ci_smarty->assign('course_id', $course_id);
-			$this->display('course/addExperiment.php');			
-			
+			$this->display('course/addExperiment.php');
  		}
 		public function doAddExperiment() {
 			$this->form_validation->set_rules('exp_name','实验名称', 'required');
@@ -60,8 +58,6 @@
 				} else {
 					echo "no";
 				}
-
-				
 			}else{
 				echo "row";
 			}

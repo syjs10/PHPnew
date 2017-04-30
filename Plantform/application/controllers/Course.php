@@ -1,9 +1,9 @@
 <?php  
 	/**
-	* 
+	*
 	*/
 	class Course extends CI_Controller {
-		
+
 		function __construct() {
 			parent::__construct();
 			$this->load->model('course_model');
@@ -11,7 +11,6 @@
 			$this->load->helper('url');
 			$this->load->helper('form');
 			$this->load->library('form_validation');
-			
 		}
 		public function display($page) {
 			$this->ci_smarty->assign('base_url', base_url());
