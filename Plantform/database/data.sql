@@ -25,4 +25,23 @@ CREATE TABLE experiment(
 	FOREIGN KEY (course_id) REFERENCES course(course_id)
 ) ENGINE=INNODB;
 -- INSERT INTO teacher (username, password, teacher_name) 
--- 	VALUES ('test', '098f6bcd4621d373cade4e832627b4f6', 'admin');
+-- 	VALUES ('test', '098f6bcd4621d373cade4e832627b4f6', 'min');
+
+CREATE TABLE student(
+	student_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	student_name VARCHAR(16) NOT NULL,
+	student_username VARCHAR(20) NOT NULL,
+	student_password VARCHAR(32) NOT NULL,
+	student_class VARCHAR(50) NOT NULL,
+	student_num VARCHAR(9) NOT NULL
+);
+-- ALTER TABLE student ADD INDEX name_num_class (student_name(10), student_num, student_class);
+-- ALTER TABLE course ADD INDEX name_introduction_teacher (course_name, course_introduction, teacher_id);
+CREATE TABLE choose_course(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	student_id INT NOT NULL,
+	course_id INT NOT NULL,
+	FOREIGN KEY (course_id) REFERENCES course(course_id),
+	FOREIGN KEY (student_id) REFERENCES student(student_id)
+
+);
