@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-13 21:48:44
+/* Smarty version 3.1.30, created on 2017-07-15 17:50:09
   from "/var/www/html/Plantform/application/views/login/teacherLogin.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59677a3c7de027_51559162',
+  'unifunc' => 'content_5969e5515c6502_76211548',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6fc9e18df7bfa42d83f9279975dafb19d7c7e2cd' => 
     array (
       0 => '/var/www/html/Plantform/application/views/login/teacherLogin.php',
-      1 => 1499953700,
+      1 => 1500112081,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59677a3c7de027_51559162 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5969e5515c6502_76211548 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_125823661359677a3c7dc939_80243614', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_63258565969e5515c4f53_91276333', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_132131776859677a3c7ddc95_77185329', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11425404255969e5515c61e8_66011016', 'body');
 }
 /* {block 'head'} */
-class Block_125823661359677a3c7dc939_80243614 extends Smarty_Internal_Block
+class Block_63258565969e5515c4f53_91276333 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -109,7 +109,7 @@ image/login_background.jpg') no-repeat;
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_132131776859677a3c7ddc95_77185329 extends Smarty_Internal_Block
+class Block_11425404255969e5515c61e8_66011016 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -146,8 +146,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                                     <div class="col-md-6">
                                           <input type="text" name="verify" style="" class="form-control input" placeholder="Verify">
                                     </div>
-                                    <div class="col-md-3">
-                                          <img id = "verify_img" style="" src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+                                    <div class="col-md-3" style="margin-left:0;padding-left:0;">
+                                          <img id = "verify_img" style=" width:100%; height:30px;" src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 index.php/verify/verify_image"  onclick="this.src='<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 index.php/verify/verify_image'" />
                                     </div>

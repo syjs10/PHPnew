@@ -1,5 +1,5 @@
 <{block name=head}>
-<title>教师登陆</title>
+<title>学生登陆</title>
 <style media="screen">
       body{
             background: url('<{$base_url}>image/login_background.jpg') no-repeat;

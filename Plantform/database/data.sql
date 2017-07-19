@@ -30,11 +30,14 @@ CREATE TABLE experiment(
 CREATE TABLE student(
 	student_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	student_name VARCHAR(16) NOT NULL,
-	student_username VARCHAR(20) NOT NULL,
-	student_password VARCHAR(32) NOT NULL,
+	username VARCHAR(20) NOT NULL,
+	password VARCHAR(32) NOT NULL,
 	student_class VARCHAR(50) NOT NULL,
 	student_num VARCHAR(9) NOT NULL
 );
+-- INSERT INTO student (username, password, student_name, student_class, student_num) 
+-- 	VALUES ('test', '098f6bcd4621d373cade4e832627b4f6', 'syjs10', '三班', '150405302');
+
 -- ALTER TABLE student ADD INDEX name_num_class (student_name(10), student_num, student_class);
 -- ALTER TABLE course ADD INDEX name_introduction_teacher (course_name, course_introduction, teacher_id);
 CREATE TABLE choose_course(

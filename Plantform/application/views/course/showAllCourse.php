@@ -90,7 +90,7 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<{foreach from=$course_info item=value}>
-							<div class="col-md-4 block" onclick="location.href='<{$base_url}>index.php/course/<{$value['course_id']}>'">
+							<div class="col-xs-4 col-sm-4 col-md-3 block" onclick="location.href='<{$base_url}>index.php/course/<{$value['course_id']}>'">
 								<div class="inner">
 									<div class="image">
 										<img src="<{$value['img_path']}>" alt="" width="100%" height="100%">

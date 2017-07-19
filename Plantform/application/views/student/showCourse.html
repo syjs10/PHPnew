@@ -1,0 +1,65 @@
+<{block name=head}>
+<style>
+	/*div{
+		border: 1px solid #ccc;
+	}*/
+	.panel-heading{
+		padding: 0px;
+	}
+	.navbar{
+		margin: 0px;
+		border: 0px;
+	}
+	.navbar-btn{
+		margin: 0px;
+	}
+</style>
+<{/block}>
+<{block name=body}>
+<div class="container">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="panel panel-default">
+				<div class="panel-heading" style="border-bottom: 0px;">
+					<div class="nav nav-tabs" id = "bar">
+						<li role="presentation" onclick="changePage(this, '../course/showAllCourse')" class="" id="all" ><a href="#">全部课程</a></li>
+						<li role="presentation" onclick="changePage(this, '../student_action/')" class="" id="all" id="choosed"><a href="#">已选课程</a></li>
+						<li role="presentation" onclick="changePage(this, '../student_action/')" class="" id="all" id="over"><a href="#">已学习课程</a></li>
+
+						<!-- <li role="presentation"><a href="#">课程成绩</a></li> -->
+					</div>
+				</div>
+				<div class="panel-body">
+					<iframe src="../course/showAllCourse" frameborder="0" id="window" style="width: 100%; height: 100%;"></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
+<script>
+	/**
+	 * 标签切换时样式变化
+	 * @param  {pointer} obj 把标签元素指针
+	 * @return 
+	 */
+	var change_bg = function (obj) {
+    	var a=document.getElementById('bar').getElementsByTagName("li");
+	    for(var i=0;i<a.length;i++) {
+	        a[i].className="";
+	    }
+	    obj.className="active";
+	}
+	/**
+	 * 切换显示页面
+	 * @param  {[type]} page [description]
+	 * @return {[type]}      [description]
+	 */
+	function changePage(obj,page) {
+		var window = document.getElementById('window');
+		window.src=page;
+		change_bg(obj);
+	}
+</script>
+<{/block}>
