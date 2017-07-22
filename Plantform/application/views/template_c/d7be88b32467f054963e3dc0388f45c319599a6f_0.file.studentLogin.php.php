@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-15 20:08:20
+/* Smarty version 3.1.30, created on 2017-07-19 09:53:01
   from "/var/www/html/Plantform/application/views/login/studentLogin.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_596a05b4745342_77083529',
+  'unifunc' => 'content_596ebb7d8c1f95_61756626',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd7be88b32467f054963e3dc0388f45c319599a6f' => 
     array (
       0 => '/var/www/html/Plantform/application/views/login/studentLogin.php',
-      1 => 1500120495,
+      1 => 1500429180,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_596a05b4745342_77083529 (Smarty_Internal_Template $_smarty_tpl) {
+function content_596ebb7d8c1f95_61756626 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_458767487596a05b473ec98_22392596', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1803742550596ebb7d8bff05_13747090', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_937530917596a05b4744728_90577909', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1130863964596ebb7d8c1aa7_43283688', 'body');
 }
 /* {block 'head'} */
-class Block_458767487596a05b473ec98_22392596 extends Smarty_Internal_Block
+class Block_1803742550596ebb7d8bff05_13747090 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -83,8 +83,8 @@ image/login_background.jpg') no-repeat;
             padding-left: 0px;
       }
       .block{
-            padding:50px 30px;
-            border-radius: 5px;
+            padding-top:50px;
+            margin: 0 auto;
       }
       .body{
             background-color: rgba(0, 0, 0, 0.5);
@@ -109,7 +109,7 @@ image/login_background.jpg') no-repeat;
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_937530917596a05b4744728_90577909 extends Smarty_Internal_Block
+class Block_1130863964596ebb7d8c1aa7_43283688 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -124,29 +124,29 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                   <div class="col-md-3"></div>
             </div>
             <div class="row log" style="padding-top:20px;">
-                  <div class="col-md-4 clo-sm-1"></div>
-                  <div class="col-md-4 clo-sm-10 block">
+                  <div class="col-md-4 clo-sm-2"></div>
+                  <div class="col-md-4 clo-sm-8 block">
                         <?php echo $_smarty_tpl->tpl_vars['form']->value;?>
 
                               <div class="form-group" >
-                                    <label for="Username" class="col-md-3">用户名</label>
-                                    <div class="col-md-9">
+                                    <label for="Username" class="col-md-3 col-sm-3 col-xs-3">用户名</label>
+                                    <div class="col-md-9 col-sm-9 col-xs-9">
                                           <input type="text" name="username" style=""class="form-control input" placeholder="UserName">
                                     </div>
 
                               </div>
                               <div class="form-group" >
-                                    <label for="Password" class="col-md-3">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
-                                    <div class="col-md-9">
+                                    <label for="Password" class="col-md-3 col-ms-3 col-xs-3">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                                    <div class="col-md-9 col-sm-9 col-xs-9">
                                           <input type="password" name="password" style=""class="form-control input" placeholder="PassWord">
                                     </div>
                               </div>
                               <div class="form-group" >
-                                    <label for="Verify" class="col-md-3">验证码</label>
-                                    <div class="col-md-6">
+                                    <label for="Verify" class="col-md-3 col-xs-3">验证码</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
                                           <input type="text" name="verify" style="" class="form-control input" placeholder="Verify">
                                     </div>
-                                    <div class="col-md-3" style="margin-left:0;padding-left:0;">
+                                    <div class="col-md-3 col-sm-3 col-xs-3" style="margin-left:0;padding-left:0;">
                                           <img id = "verify_img" style=" width:100%; height:30px;" src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 index.php/verify/verify_image"  onclick="this.src='<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 index.php/verify/verify_image'" />
@@ -154,10 +154,10 @@ index.php/verify/verify_image'" />
 
                               </div>
                               <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
                                           <input type="submit" class="btn" style="margin-top:5px;width:100%;font-weight: bold;font-size:15px;" value="登&nbsp;&nbsp;&nbsp;&nbsp;陆">
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
                                           <input type="submit" class="btn" style="margin-top:5px;width:100%;font-weight: bold;font-size:15px;" value="忘记密码">
                                     </div>
                               </div>
@@ -165,7 +165,7 @@ index.php/verify/verify_image'" />
 
                         </form>
                   </div>
-                  <div class="col-md-4 col-sm-1"></div>
+                  <div class="col-md-4 col-sm-2"></div>
             </div>
       </div>
 </div>

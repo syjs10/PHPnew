@@ -52,10 +52,10 @@ class Docker extends CI_Controller{
         /**
          * 防止重复开启虚拟机
          */
-        // if (isset($_SESSION['docker_info'])){
-        //     return $_SESSION['docker_info']['port'];
-        //     exit;
-        // }
+        if (isset($_SESSION['docker_info'])){
+            return $_SESSION['docker_info']['port'];
+            exit;
+        }
         /**
          * 判断端口是否占用
          * @var [type]

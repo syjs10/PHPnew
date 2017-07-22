@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-17 17:39:41
+/* Smarty version 3.1.30, created on 2017-07-19 20:36:45
   from "/var/www/html/Plantform/application/views/course/showAllCourse.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_596c85dd2c2861_06857516',
+  'unifunc' => 'content_596f525deab3d8_01892544',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'df0d00b336716331f46f99139284cf0ff8d8ee77' => 
     array (
       0 => '/var/www/html/Plantform/application/views/course/showAllCourse.php',
-      1 => 1500284378,
+      1 => 1500467800,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,21 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_596c85dd2c2861_06857516 (Smarty_Internal_Template $_smarty_tpl) {
+function content_596f525deab3d8_01892544 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_629557479596c85dd2ba787_38610017', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1956586677596f525dea5c73_66849843', 'head');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_707577877596c85dd2c1e72_80104843', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2019754663596f525deaafb4_71254696', 'body');
 }
 /* {block 'head'} */
-class Block_629557479596c85dd2ba787_38610017 extends Smarty_Internal_Block
+class Block_1956586677596f525dea5c73_66849843 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
+
 
 <style type="text/css" media="screen">
 	*{
@@ -122,7 +123,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_707577877596c85dd2c1e72_80104843 extends Smarty_Internal_Block
+class Block_2019754663596f525deaafb4_71254696 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -138,9 +139,9 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
 ?>
-							<div class="col-xs-4 col-sm-4 col-md-3 block" onclick="location.href='<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+							<div class="col-xs-4 col-sm-4 col-md-3 block" onclick="window.open('<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 index.php/course/<?php echo $_smarty_tpl->tpl_vars['value']->value['course_id'];?>
-'">
+'); ">
 								<div class="inner">
 									<div class="image">
 										<img src="<?php echo $_smarty_tpl->tpl_vars['value']->value['img_path'];?>

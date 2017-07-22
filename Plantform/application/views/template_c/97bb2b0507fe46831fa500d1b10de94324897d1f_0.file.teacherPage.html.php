@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-15 18:30:05
+/* Smarty version 3.1.30, created on 2017-07-19 10:00:47
   from "/var/www/html/Plantform/application/views/teacher/teacherPage.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5969eeadee2824_40159473',
+  'unifunc' => 'content_596ebd4f7ba249_15197987',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '97bb2b0507fe46831fa500d1b10de94324897d1f' => 
     array (
       0 => '/var/www/html/Plantform/application/views/teacher/teacherPage.html',
-      1 => 1492431912,
+      1 => 1500429644,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5969eeadee2824_40159473 (Smarty_Internal_Template $_smarty_tpl) {
+function content_596ebd4f7ba249_15197987 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6033937205969eeadede4a0_78410530', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1610938869596ebd4f7b5f71_51147948', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4984413125969eeadee1d42_02338484', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1842447190596ebd4f7b9730_78873218', 'body');
 }
 /* {block 'head'} */
-class Block_6033937205969eeadede4a0_78410530 extends Smarty_Internal_Block
+class Block_1610938869596ebd4f7b5f71_51147948 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -65,13 +65,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 		.head{
 			height: 20%;
 			width: 100%;
-			
-			/*background-color: #555;
-			font-size: 50px;
-			color: #fff;
-			text-align: center;
-			padding-top: 2%;
-			text-shadow: 0 0 3px #ccc;*/
 		}
 		#window{
 			border: 0px;
@@ -112,7 +105,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_4984413125969eeadee1d42_02338484 extends Smarty_Internal_Block
+class Block_1842447190596ebd4f7b9730_78873218 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -156,7 +149,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 				</ul>
 			</div>
 			<div class="col-md-9 embed-responsive-item" style="height: 100%;padding: 0px;" >
-				<iframe src="framepage/test.html" id="window" style="width: 100%; height: 100%;"></iframe>
+				<iframe src="teacherFramePage/test.html" id="window" style="width: 100%; height: 100%;"></iframe>
 			</div>
 		</div>
 	</div>

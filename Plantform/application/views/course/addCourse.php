@@ -1,9 +1,7 @@
 <{block name=head}>
 	<style type="text/css" media="screen">
 		.container{
-			position: absolute;
-			top:10%;
-
+			margin: 10% auto;
 		}
 	</style>
 <{/block}>
@@ -24,14 +22,14 @@
 								<div class="col-md-6">
 									<input type="text" class="form-control" name="course_name">
 								</div>
-								<span class="help-block">test</span>
+								<!-- <span class="help-block">test</span> -->
 							</div>
 							<div class="form-group">
 								<label class="col-md-2 control-label" for="course_introduction" >课程简介</label>
 								<div class="col-md-6">
 									<textarea class="form-control" name="course_introduction" rows="4"></textarea>
 								</div>
-								<span class="help-block">test</span>
+								<!-- <span class="help-block">test</span> -->
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-md-2 control-label" for="myfile" >课程封面</label>

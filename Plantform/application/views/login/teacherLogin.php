@@ -45,7 +45,7 @@
             padding-left: 0px;
       }
       .block{
-            padding:50px 30px;
+            padding-top: 50px;
             border-radius: 5px;
       }
       .body{
@@ -74,42 +74,42 @@
             <div class="row title" style="margin-bottom:3%;">
                   <div class="col-md-3"></div>
                   <div class="col-md-6">
-                        <h1 class="h1">学生入口</h1>
+                        <h1 class="h1">教师入口</h1>
                   </div>
                   <div class="col-md-3"></div>
             </div>
             <div class="row log" style="padding-top:20px;">
-                  <div class="col-md-4 clo-sm-1"></div>
-                  <div class="col-md-4 clo-sm-10 block">
+                  <div class="col-md-4 clo-sm-2"></div>
+                  <div class="col-md-4 clo-sm-8 block">
                         <{$form}>
                               <div class="form-group" >
-                                    <label for="Username" class="col-md-3">用户名</label>
-                                    <div class="col-md-9">
+                                    <label for="Username" class="col-md-3 col-sm-3 col-xs-3">用户名</label>
+                                    <div class="col-md-9 col-sm-9 col-xs-9">
                                           <input type="text" name="username" style=""class="form-control input" placeholder="UserName">
                                     </div>
 
                               </div>
                               <div class="form-group" >
-                                    <label for="Password" class="col-md-3">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
-                                    <div class="col-md-9">
+                                    <label for="Password" class="col-md-3 col-ms-3 col-xs-3">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                                    <div class="col-md-9 col-sm-9 col-xs-9">
                                           <input type="password" name="password" style=""class="form-control input" placeholder="PassWord">
                                     </div>
                               </div>
                               <div class="form-group" >
-                                    <label for="Verify" class="col-md-3">验证码</label>
-                                    <div class="col-md-6">
+                                    <label for="Verify" class="col-md-3 col-xs-3">验证码</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
                                           <input type="text" name="verify" style="" class="form-control input" placeholder="Verify">
                                     </div>
-                                    <div class="col-md-3" style="margin-left:0;padding-left:0;">
+                                    <div class="col-md-3 col-sm-3 col-xs-3" style="margin-left:0;padding-left:0;">
                                           <img id = "verify_img" style=" width:100%; height:30px;" src="<{$base_url}>index.php/verify/verify_image"  onclick="this.src='<{$base_url}>index.php/verify/verify_image'" />
                                     </div>
 
                               </div>
                               <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
                                           <input type="submit" class="btn" style="margin-top:5px;width:100%;font-weight: bold;font-size:15px;" value="登&nbsp;&nbsp;&nbsp;&nbsp;陆">
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
                                           <input type="submit" class="btn" style="margin-top:5px;width:100%;font-weight: bold;font-size:15px;" value="忘记密码">
                                     </div>
                               </div>
@@ -117,7 +117,7 @@
 
                         </form>
                   </div>
-                  <div class="col-md-4 col-sm-1"></div>
+                  <div class="col-md-4 col-sm-2"></div>
             </div>
       </div>
 </div>

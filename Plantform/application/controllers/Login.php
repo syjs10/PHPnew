@@ -26,8 +26,11 @@ class Login extends CI_Controller {
 	 * 教师登录页面
 	 * @return [type] [description]
 	 */
-	public function showTeacherLogin()
-	{
+	public function showTeacherLogin() {
+		if ($this->session->userdata('teacher_name') != NULL) {
+			$this->showTeacherPage(); 
+			exit; 
+		}
 		$form = form_open('login/doTeacherLogin','class="form-horizontal",role="form"');
 		$this->ci_smarty->assign('form', $form);
 		$this->display('login/teacherLogin.php');
@@ -39,6 +42,11 @@ class Login extends CI_Controller {
 	 * 之后可以修改为通用登陆验证
 	 */
 	function doTeacherLogin() {
+		if ($this->session->userdata('teacher_name') != NULL) {
+			$this->showTeacherPage(); 
+			exit; 
+			
+		}
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 		$this->form_validation->set_rules('verify', 'Verify', 'required');
@@ -52,6 +60,7 @@ class Login extends CI_Controller {
 					'password' => md5($password)
 					);
 				$arr = $this->login_model->login_match('teacher', $data);
+				$this->session->set_userdata('user', 'teacher');
 				$this->session->set_userdata('username', $username);
 				$this->session->set_userdata('teacher_name', $arr['teacher_name']);
 				$this->session->set_userdata('teacher_id', $arr['teacher_id']);
@@ -84,8 +93,14 @@ class Login extends CI_Controller {
 	 */
 	public function showTeacherPage() {
 				//登陆验证
-		$this->ci_smarty->assign('teacher_name', $this->session->userdata('teacher_name')) ;
-		$this->display('teacher/teacherPage.html');
+		if ($this->session->userdata('teacher_name') != NULL) {
+			$this->ci_smarty->assign('teacher_name', $this->session->userdata('teacher_name')) ;
+			$this->display('teacher/teacherPage.html');
+		} else {
+			$this->showTeacherLogin();
+		}
+
+		
 	}
 	/**
 	 * 教师选择页面
@@ -103,8 +118,11 @@ class Login extends CI_Controller {
 	 * 学生登录页面
 	 * @return [type] [description]
 	 */
-	public function showStudentLogin()
-	{
+	public function showStudentLogin() {
+		if ($this->session->userdata('student_name') != NULL) {
+			$this->showStudentPage(); 
+			exit; 
+		}
 		$form = form_open('login/doStudentLogin','class="form-horizontal",role="form"');
 		$this->ci_smarty->assign('form', $form);
 		$this->display('login/studentLogin.php');
@@ -118,6 +136,11 @@ class Login extends CI_Controller {
 	 * 之后可以修改为通用登陆验证
 	 */
 	function doStudentLogin() {
+		if ($this->session->userdata('student_name') != NULL) {
+			$this->showStudentPage(); 
+			exit; 
+			// header('location:showStudentPage');
+		}
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 		$this->form_validation->set_rules('verify', 'Verify', 'required');
@@ -132,6 +155,7 @@ class Login extends CI_Controller {
 					);
 				$arr = $this->login_model->login_match('student', $data);
 				$this->session->set_userdata('username', $username);
+				$this->session->set_userdata('user', 'student');
 				$this->session->set_userdata('student_name', $arr['student_name']);
 				$this->session->set_userdata('student_id', $arr['student_id']);
 										//学生登陆后页面
@@ -160,8 +184,13 @@ class Login extends CI_Controller {
 	}
 	public function showStudentPage() {
 				//登陆验证
-		$this->ci_smarty->assign('student_name', $this->session->userdata('student_name')) ;
-		$this->display('student/studentPage.html');
+		if ($this->session->userdata('student_name') != NULL) {
+			$this->ci_smarty->assign('student_name', $this->session->userdata('student_name')) ;
+			$this->display('student/studentPage.html');
+		} else {
+			$this->showStudentLogin();
+		}
+		
 	}
 	/**
 	 * 学生选择页面
