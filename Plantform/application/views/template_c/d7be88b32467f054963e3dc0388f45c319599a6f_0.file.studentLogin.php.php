@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-19 09:53:01
+/* Smarty version 3.1.30, created on 2017-07-22 16:51:29
   from "/var/www/html/Plantform/application/views/login/studentLogin.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_596ebb7d8c1f95_61756626',
+  'unifunc' => 'content_59731211521157_07199875',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd7be88b32467f054963e3dc0388f45c319599a6f' => 
     array (
       0 => '/var/www/html/Plantform/application/views/login/studentLogin.php',
-      1 => 1500429180,
+      1 => 1500694086,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_596ebb7d8c1f95_61756626 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59731211521157_07199875 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1803742550596ebb7d8bff05_13747090', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18682125245973121151c548_44031096', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1130863964596ebb7d8c1aa7_43283688', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_194134479597312115205d3_82741381', 'body');
 }
 /* {block 'head'} */
-class Block_1803742550596ebb7d8bff05_13747090 extends Smarty_Internal_Block
+class Block_18682125245973121151c548_44031096 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -87,7 +87,7 @@ image/login_background.jpg') no-repeat;
             margin: 0 auto;
       }
       .body{
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.6);
             width: 100%;
             height: 100%;
             text-align: 
@@ -109,7 +109,7 @@ image/login_background.jpg') no-repeat;
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_1130863964596ebb7d8c1aa7_43283688 extends Smarty_Internal_Block
+class Block_194134479597312115205d3_82741381 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

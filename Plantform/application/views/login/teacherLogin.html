@@ -1,46 +1,8 @@
-<?php
-/* Smarty version 3.1.30, created on 2017-07-22 16:52:03
-  from "/var/www/html/Plantform/application/views/login/teacherLogin.php" */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.30',
-  'unifunc' => 'content_59731233852ef2_01024549',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    '6fc9e18df7bfa42d83f9279975dafb19d7c7e2cd' => 
-    array (
-      0 => '/var/www/html/Plantform/application/views/login/teacherLogin.php',
-      1 => 1500713522,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_59731233852ef2_01024549 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_loadInheritance();
-$_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_75253635559731233851921_42682299', 'head');
-?>
-
-
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_201857872759731233852b88_05842114', 'body');
-}
-/* {block 'head'} */
-class Block_75253635559731233851921_42682299 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
+<{block name=head}>
 <title>教师登陆</title>
 <style media="screen">
       body{
-            background: url('<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-image/login_background.jpg') no-repeat;
+            background: url('<{$base_url}>image/login_background.jpg') no-repeat;
             background-size:100% 100%;
             font-size: 17px;
             text-align: center;
@@ -104,16 +66,9 @@ image/login_background.jpg') no-repeat;
             margin-top: -50px;
       }
 </style>
-<?php
-}
-}
-/* {/block 'head'} */
-/* {block 'body'} */
-class Block_201857872759731233852b88_05842114 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
+<{/block}>
 
+<{block name=body}>
 <div class="body">
       <div class="container login" style="width:100%">
             <div class="row title" style="margin-bottom:3%;">
@@ -126,8 +81,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <div class="row log" style="padding-top:20px;">
                   <div class="col-md-4 clo-sm-2"></div>
                   <div class="col-md-4 clo-sm-8 block">
-                        <?php echo $_smarty_tpl->tpl_vars['form']->value;?>
-
+                        <{$form}>
                               <div class="form-group" >
                                     <label for="Username" class="col-md-3 col-sm-3 col-xs-3">用户名</label>
                                     <div class="col-md-9 col-sm-9 col-xs-9">
@@ -147,9 +101,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                                           <input type="text" name="verify" style="" class="form-control input" placeholder="Verify">
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-3" style="margin-left:0;padding-left:0;">
-                                          <img id = "verify_img" style=" width:100%; height:30px;" src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-index.php/verify/verify_image"  onclick="this.src='<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-index.php/verify/verify_image'" />
+                                          <img id = "verify_img" style=" width:100%; height:30px;" src="<{$base_url}>index.php/verify/verify_image"  onclick="this.src='<{$base_url}>index.php/verify/verify_image'" />
                                     </div>
 
                               </div>
@@ -169,8 +121,4 @@ index.php/verify/verify_image'" />
             </div>
       </div>
 </div>
-<?php
-}
-}
-/* {/block 'body'} */
-}
+<{/block}>

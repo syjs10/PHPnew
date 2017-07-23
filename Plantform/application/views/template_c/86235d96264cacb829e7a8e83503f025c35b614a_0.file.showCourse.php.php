@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-19 21:38:22
+/* Smarty version 3.1.30, created on 2017-07-22 17:53:41
   from "/var/www/html/Plantform/application/views/course/showCourse.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_596f60cea640e3_11274738',
+  'unifunc' => 'content_597320a5d57c77_89823509',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '86235d96264cacb829e7a8e83503f025c35b614a' => 
     array (
       0 => '/var/www/html/Plantform/application/views/course/showCourse.php',
-      1 => 1500471496,
+      1 => 1500714204,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_596f60cea640e3_11274738 (Smarty_Internal_Template $_smarty_tpl) {
+function content_597320a5d57c77_89823509 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1609758522596f60cea4a978_58501795', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_680389946597320a5d3f271_46579668', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1301923742596f60cea62d86_45161424', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2014391399597320a5d56e69_44217976', 'body');
 }
 /* {block 'head'} */
-class Block_1609758522596f60cea4a978_58501795 extends Smarty_Internal_Block
+class Block_680389946597320a5d3f271_46579668 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -42,29 +42,32 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_1301923742596f60cea62d86_45161424 extends Smarty_Internal_Block
+class Block_2014391399597320a5d56e69_44217976 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-<nav class="navbar navbar-default">
-	<ul class="nav navbar-nav navbar-right">
-		<li><a href="#">test</a></li>
-		<li class="dropdown">
-        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-            	<li><a href="#">Action</a></li>
-            	<li><a href="#">Another action</a></li>
-            	<li><a href="#">Something else here</a></li>
-            	<li role="separator" class="divider"></li>
-            	<li><a href="#">Separated link</a></li>
-            </ul>
-        </li>
-	</ul>
-</nav>
-	<?php if ($_SESSION['username'] != null) {?>
-		ok
-	<?php }?>
+	<nav class="navbar navbar-default">
+		<?php if (isset($_SESSION['username'])) {?>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><!-- <?php echo $_SESSION['username'];?>
+ --> <span class="caret"></span></a>
+		            <ul class="dropdown-menu">
+		            	<li><a href="#">Action</a></li>
+		            	<li><a href="#">Another action</a></li>
+		            	<li><a href="#">Something else here</a></li>
+		            	<li role="separator" class="divider"></li>
+		            	<li><a href="#">Separated link</a></li>
+		            </ul>
+		        </li>
+			</ul>
+		<?php } else { ?>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../login">登录</a></li>
+			</ul>
+		<?php }?>
+	</nav>
 	<button type="" class="btn btn-success" onclick="location.href='<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 index.php/teacher_action/addExperiment/<?php echo $_smarty_tpl->tpl_vars['course_id']->value;?>
 '">添加实验</button>

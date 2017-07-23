@@ -7,6 +7,7 @@ class Login extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->helper('cookie');
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->library('session');
@@ -26,14 +27,18 @@ class Login extends CI_Controller {
 	 * 教师登录页面
 	 * @return [type] [description]
 	 */
+	public function index(){
+		$this->display('login/login.html');
+	}
 	public function showTeacherLogin() {
-		if ($this->session->userdata('teacher_name') != NULL) {
+		if (NULL != $this->session->userdata('teacher_name') || get_cookie("teacherLogin") != NULL) {
 			$this->showTeacherPage(); 
 			exit; 
+			
 		}
 		$form = form_open('login/doTeacherLogin','class="form-horizontal",role="form"');
 		$this->ci_smarty->assign('form', $form);
-		$this->display('login/teacherLogin.php');
+		$this->display('login/teacherLogin.html');
 	}
 	/**
 	 * 执行教师登陆操作
@@ -42,7 +47,7 @@ class Login extends CI_Controller {
 	 * 之后可以修改为通用登陆验证
 	 */
 	function doTeacherLogin() {
-		if ($this->session->userdata('teacher_name') != NULL) {
+		if (NULL != $this->session->userdata('teacher_name') || get_cookie("teacherLogin") != NULL) {
 			$this->showTeacherPage(); 
 			exit; 
 			
@@ -64,6 +69,7 @@ class Login extends CI_Controller {
 				$this->session->set_userdata('username', $username);
 				$this->session->set_userdata('teacher_name', $arr['teacher_name']);
 				$this->session->set_userdata('teacher_id', $arr['teacher_id']);
+				set_cookie("teacherLogin", $username, 60);
 										//教师登陆后页面
 										// echo $this->session->userdata('username')."页面";
 				if ($arr) {
@@ -77,14 +83,14 @@ class Login extends CI_Controller {
 				echo "<script>alert('验证码错误');</script>";
 				$form = form_open('login/doTeacherLogin','class="form-horizontal",role="form"');
 				$this->ci_smarty->assign('form', $form);
-				$this->display('login/teacherLogin.php');
+				$this->display('login/teacherLogin.html');
 			}
 			
 		} else {
 			echo "<script>alert('表单不能为空');</script>";
 			$form = form_open('login/doTeacherLogin','class="form-horizontal",role="form"');
 			$this->ci_smarty->assign('form', $form);
-			$this->display('login/teacherLogin.php');
+			$this->display('login/teacherLogin.html');
 		}
 	}
 	/**
@@ -93,7 +99,7 @@ class Login extends CI_Controller {
 	 */
 	public function showTeacherPage() {
 				//登陆验证
-		if ($this->session->userdata('teacher_name') != NULL) {
+		if ($this->session->userdata('teacher_name') != NULL || get_cookie("teacherLogin") != NULL) {
 			$this->ci_smarty->assign('teacher_name', $this->session->userdata('teacher_name')) ;
 			$this->display('teacher/teacherPage.html');
 		} else {
@@ -119,13 +125,13 @@ class Login extends CI_Controller {
 	 * @return [type] [description]
 	 */
 	public function showStudentLogin() {
-		if ($this->session->userdata('student_name') != NULL) {
+		if ($this->session->userdata('student_name') != NULL || get_cookie("studentLogin") != NULL) {
 			$this->showStudentPage(); 
 			exit; 
 		}
 		$form = form_open('login/doStudentLogin','class="form-horizontal",role="form"');
 		$this->ci_smarty->assign('form', $form);
-		$this->display('login/studentLogin.php');
+		$this->display('login/studentLogin.html');
 	}
 
 
@@ -136,7 +142,7 @@ class Login extends CI_Controller {
 	 * 之后可以修改为通用登陆验证
 	 */
 	function doStudentLogin() {
-		if ($this->session->userdata('student_name') != NULL) {
+		if ($this->session->userdata('student_name') != NULL || get_cookie("studentLogin") != NULL) {
 			$this->showStudentPage(); 
 			exit; 
 			// header('location:showStudentPage');
@@ -158,6 +164,8 @@ class Login extends CI_Controller {
 				$this->session->set_userdata('user', 'student');
 				$this->session->set_userdata('student_name', $arr['student_name']);
 				$this->session->set_userdata('student_id', $arr['student_id']);
+				set_cookie("studentLogin", $username, 60);
+
 										//学生登陆后页面
 										// echo $this->session->userdata('student_name')."页面";
 				if ($arr) {
@@ -172,14 +180,16 @@ class Login extends CI_Controller {
 				echo "<script>alert('验证码错误');</script>";
 				$form = form_open('login/doStudentLogin','class="form-horizontal",role="form"');
 				$this->ci_smarty->assign('form', $form);
-				$this->display('login/studentLogin.php');
+				$this->display('login/studentLogin.html');
 			}
 			
 		} else {
 			echo "<script>alert('表单不能为空');</script>";
-			$form = form_open('login/doStudentLogin','class="form-horizontal",role="form"');
-			$this->ci_smarty->assign('form', $form);
-			$this->display('login/studentLogin.php');
+			// $form = form_open('login/doStudentLogin','class="form-horizontal",role="form"');
+			// $this->ci_smarty->assign('form', $form);
+			// $this->display('login/studentLogin.html');
+			header('Location:./login/showStudentLogin');
+			exit;
 		}
 	}
 	public function showStudentPage() {
