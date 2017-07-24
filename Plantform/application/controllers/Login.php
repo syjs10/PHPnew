@@ -185,9 +185,6 @@ class Login extends CI_Controller {
 			
 		} else {
 			echo "<script>alert('表单不能为空');</script>";
-			// $form = form_open('login/doStudentLogin','class="form-horizontal",role="form"');
-			// $this->ci_smarty->assign('form', $form);
-			// $this->display('login/studentLogin.html');
 			header('Location:./login/showStudentLogin');
 			exit;
 		}
