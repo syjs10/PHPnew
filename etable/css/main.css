@@ -1,0 +1,36 @@
+body{
+	background-color:#899BA5;
+}
+
+.container {
+	width:960px;
+	margin:80px auto;
+}
+
+td {
+	font-size:20px;
+	width:120px;
+	height:40px;
+	text-align:center;
+	color:black;
+	cursor:pointer;
+	background-color:white;
+}
+
+td:hover{
+	background-color:#aaaacc;
+}
+
+input.txtField{
+	width:90px;
+	height:30px;
+}
+
+.optLink{
+	text-decoration:none;	
+	color:#f46948;
+}
+
+.optLink:hover{
+	color:#cc0033;
+}
