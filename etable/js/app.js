@@ -10,6 +10,15 @@ $(function () {
 		}
 	});
 	function create_row(data_item){
-		return $('<tr><td colspan="9"><h1>Hello this create dome</h1></td></tr>');
+		// debugger;
+		var row_obj = $("<tr></tr>");
+		for (var k in data_item) {
+			if ("id" != k) {
+				var col_td = $("<td></td>");
+				col_td.html(data_item[k]);
+				row_obj.append(col_td);
+			}
+		}
+		return row_obj;
 	}
 });
