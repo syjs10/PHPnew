@@ -5,8 +5,9 @@
 	*/
 	class imooc{
 		public static $classMap = array();
+		public $assign;
 		static public function run(){
-			p('ok');
+			// p('ok');
 			$route = new \core\lib\route();
 			// p($route);
 			$ctrlClass = $route->ctrl;
@@ -17,7 +18,7 @@
 			if (is_file($ctrl_file)) {
 				include_once $ctrl_file;
 				$ctrl = new $ctrlClassL();
-				$ctrl->action();
+				$ctrl->index();
 			} else {
 				throw new \Exception('找不到控制器'.$ctrlClass);
 			}
@@ -40,5 +41,15 @@
 			
 			
 			
+		}
+		public function assign($name, $value) {
+			$this->assign[$name] = $value;
 		} 
+		public function display($file){
+			$file = APP.'/views/'.$file;
+			if (is_file($file)) {
+				extract($this->assign);
+				include $file;
+			}
+		}
 	}
