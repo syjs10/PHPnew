@@ -1,0 +1,20 @@
+{  
+    "name":"IMOOK PHP",  
+    "description": "PHP FRAMEWORK",  
+    "type":"Framework",  
+    "keywords":[  
+      "PHP","PHP FRAMEWORK"  
+    ],  
+    "require":{  
+        "php":">5.3.0",  
+        "filp/whoops":"*",  
+        "symfony/var-dumper":"*",  
+        "catfan/medoo":"*"  
+    },  
+    "repositories": {  
+	    "packagist": {  
+	        "type": "composer",  
+	        "url": "https://packagist.phpcomposer.com"  
+	    }  
+	}  
+}  

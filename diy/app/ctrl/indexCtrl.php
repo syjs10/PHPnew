@@ -1,16 +1,31 @@
 <?php 
 	namespace app\ctrl;
-	
+
+	use \core\lib\model;
 	class indexCtrl extends \core\imooc {
 		public function index() {
 			// 路由测试
 			// p('it is action');
 			
 			// model测试
-			$model = new \core\lib\model();
-			// $sql = "select * from user";
-			// $ret = $model->query($sql);
-			// p($ret->fetchAll());
+			// $model = new model();
+			// // dump($model);
+			// // $data = $model->select('user', '*');
+			// // $sql = "select * from user";
+			// // $ret = $model->query($sql);
+			// $insertData = array(
+				 
+			// 	'id' => '6',
+			// 	'name' => 'IMOOC'
+			// );
+			// $res = $model->insert('user', $insertData);
+			// // $data = $model->select('user', '*');
+
+			// // dump($data);
+			// dump($res);
+			$model = new \app\model\cModel();
+			$res = $model->lists("user");
+			dump($res);
 			
 			// view测试
 			// $data  = "Hello World";

@@ -4,12 +4,23 @@
 	/**
 	* 
 	*/
-	class model	extends \PDO{
+	// class model	extends \PDO{
+		
+	// 	public function __construct() {
+	// 		$database = conf::all('database');
+	// 		try {
+	// 			parent::__construct($database['DSN'], $database['USERNAME'], $database['PASSWD']);
+	// 		} catch (\PDOException $e) {
+	// 			p($e->getMessage());
+	// 		}
+	// 	}
+	// }
+	class model	extends \Medoo\Medoo {
 		
 		public function __construct() {
-			$database = conf::all('database');
+			$option = conf::all('database');
 			try {
-				parent::__construct($database['DSN'], $database['USERNAME'], $database['PASSWD']);
+				parent::__construct($option);
 			} catch (\PDOException $e) {
 				p($e->getMessage());
 			}
