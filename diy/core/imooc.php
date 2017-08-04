@@ -18,7 +18,7 @@
 			if (is_file($ctrl_file)) {
 				include_once $ctrl_file;
 				$ctrl = new $ctrlClassL();
-				$ctrl->index();
+				$ctrl->$action();
 				\core\lib\log::log('ctrl:'.$ctrlClass.'  '.'action:'.$action);
 			} else {
 				throw new \Exception('找不到控制器'.$ctrlClass);
@@ -47,10 +47,20 @@
 			$this->assign[$name] = $value;
 		} 
 		public function display($file){
+			// $file = APP.'/views/'.$file;
+			// if (is_file($file)) {
+			// 	extract($this->assign);
+			// 	include $file;
+			// }
 			$file = APP.'/views/'.$file;
 			if (is_file($file)) {
-				extract($this->assign);
-				include $file;
+				$loader = new \Twig_Loader_Filesystem(APP.'/views');
+				$twig = new \Twig_Environment($loader, array(
+				    'cache' => IMOOC.'log',
+				    'debug' => DEBUG
+				));
+				$template = $twig->load('index.html');
+				$template->display($this->assign?$this->assign:'');
 			}
 		}
 	}

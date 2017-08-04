@@ -22,7 +22,7 @@
 
 			}
 			// p($this->path.'/'.date('YmdH').$file.'.php');
-			return file_put_contents($this->path.'/'.date('YmdH').'/'.$file.'.php', date('Y-m-d H:i:s').' '.json_encode($message).PHP_EOL, FILE_APPEND);
+			return file_put_contents($this->path.'/'.date('YmdH').'/'.$file.'.php', date('Y-m-d H:i:s').' '.getClientIP().' '.json_encode($message).PHP_EOL, FILE_APPEND);
 		}
 		
 	}

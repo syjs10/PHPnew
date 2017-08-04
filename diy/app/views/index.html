@@ -1,2 +1,14 @@
-<h1><?php echo $title; ?></h1>
-<h3><?php echo $data; ?></h3>
+{% extends "layout.html" %}
+
+{% block head %}
+	<title>{{ title }}</title>
+	<style>
+		p{
+			color: red;
+		}
+	</style>
+{% endblock %}
+
+{% block content %}
+	<p>{{ data }}</p>
+{% endblock %}

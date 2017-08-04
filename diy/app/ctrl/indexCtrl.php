@@ -23,20 +23,37 @@
 
 			// // dump($data);
 			// dump($res);
-			$model = new \app\model\cModel();
-			$res = $model->lists("user");
-			dump($res);
-			
+			// $model = new \app\model\cModel();
+			// $res = $model->lists();
+			// dump($res);
+			// $data = array(
+			// 	'name' => 'Michaels'
+			// );
+			// $temp = $model->setOne(1, $data);
+			// $res = $model->getOne(1);
+			// dump($res);
+			// $temp = $model->delOne(4);
+			// dump($temp);
+			// $res = $model->lists();
+			// dump($res);
 			// view测试
 			// $data  = "Hello World";
-			// $title = "这是视图文件";
-			// $this->assign('title', $title);
-			// $this->assign('data', $data);
-			// $this->display('index.html');
+			$data = $_SERVER['PATH_INFO'];
+			$title = "这是视图文件";
+			$this->assign('title', $title);
+			$this->assign('data', $data);
+			$this->display('index.html');
 			
 			// 配置类测试 
 			// $temp = new \core\lib\conf;
 			// print_r($temp->get('CTRL', 'route'));
 			// print_r($temp);
+		}
+		public function test(){
+			$data  = "test";
+			$title = "这是视图文件";
+			$this->assign('title', $title);
+			$this->assign('data', $data);
+			$this->display('test.html');
 		}
 	}

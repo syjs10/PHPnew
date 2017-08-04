@@ -28,6 +28,7 @@ class route {
 			} else {
 				$this->action = conf::get('ACTION','route');
 			}
+
 			//url多余部分变成属性
 			$count = count($patharr) + 2;
 			$i = 2;
@@ -41,6 +42,7 @@ class route {
 			$this->ctrl = conf::get('CTRL','route');
 			$this->action = conf::get('ACTION','route');
 		}
+
 	}
 }
 	
