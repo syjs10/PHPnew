@@ -26,7 +26,7 @@
 		}
 		static public function load($class) {
 			//自动加载类库
-			
+			echo $class.'<br>';
 			if (isset(self::$classMap[$class])) {
 				return true;
 			} else {
