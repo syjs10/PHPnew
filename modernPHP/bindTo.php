@@ -1,6 +1,6 @@
-<?php 
+<?php
 	/**
-	* 
+	*
 	*/
 	class App
 	{
@@ -17,12 +17,12 @@
 				if ($routePath === $currentPath) {
 					$callback();
 				}
-				
+
 			}
 			header("HTTP/1.1 " . $this->responseStatus);
 			header("Content-type: " . $this->responseContentType);
 			header("Content-length: ". mb_strlen($this->responseBody));
-			echo $this->responseBody;
+            echo $this->responseBody;
 		}
 
 	}
@@ -32,3 +32,8 @@
 		$this->responseBody='{"name":"Json"}';
 	});
 	$app->dispatch('/user/josh');
+	function test ()
+	{
+	    daf
+
+	}
