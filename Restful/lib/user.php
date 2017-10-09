@@ -76,7 +76,7 @@
                 throw new Exception("注册失败", ErrorCode::REGISTER_FAIL);
             }
             return [
-                'userid' => $this->_db->lastInsertId(),
+                'userId' => $this->_db->lastInsertId(),
                 'username' => $username,
                 'createdAt' => $createdAt
             ];
