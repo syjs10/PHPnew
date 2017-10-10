@@ -18,4 +18,5 @@
         const ARTICLE_EDIT_FAIL = 12;//文章编辑失败
         const ARTICLE_DELET_FAIL = 13;//文章删除失败
         const PAGE_SIZE_TOO_BIG = 14;//分页大小太大
+        const SERVER_INTERNAL_ERROR = 15;//服务器内部错误
     }

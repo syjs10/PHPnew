@@ -1,5 +1,5 @@
 <?php
-    require 'ErrorCode.php';
+    require_once 'ErrorCode.php';
     /**
     *
     */
