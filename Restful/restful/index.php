@@ -114,11 +114,16 @@
          */
         private function _json($array, $code = 0)
         {
-            if ($code > 0 && $code != 200 && $code != 204) {
+            if ($array === null && $code == 0) {
+                $code = 204;
+            }
+            if ($code > 0 && $code != 200) {
                 header("HTTP/1.1 {$code} {$this->_statusCodes[$code]}");
             }
             header('Content-Type:application/json;charset=utf-8');
-            echo json_encode($array, JSON_UNESCAPED_UNICODE);
+            if ($code != 204) {
+                echo json_encode($array, JSON_UNESCAPED_UNICODE);
+            }
             exit ();
         }
         /**
@@ -154,7 +159,7 @@
                     return $this->_handleArticleDelete();
                 case 'GET':
                     if (empty($this->_id)) {
-                        return $this->_handleArticleList()
+                        return $this->_handleArticleList();
                     } else {
                         return $this->_handleArticleView();
                     }
@@ -177,7 +182,7 @@
             }
             $user = $this->_userLogin($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']);
             try {
-                $article = $this->_article->create($body['username'], $body['password'], $user['userId']);
+                $article = $this->_article->create($body['title'], $body['content'], $user['userId']);
                 return $article;
             } catch (Exception $e) {
                 if (!in_array($e->getCode(),
@@ -185,7 +190,7 @@
                         ErrorCode::ARTICLE_TITLE_CANNOT_EMPTY,
                         ErrorCode::ARTICLE_CONTENT_CANNOT_EMPTY
                     ])) {
-                    throw new Exception($e->getMessage(), 400);
+                    throw new Exception($e->getMessage(), 401);
                 } else {
                     throw new Exception($e->getMessage(), 500);
                 }
@@ -197,42 +202,82 @@
          */
         public function _handleArticleEdit()
         {
-            $body = $this->_getBodyParams();
-            if (empty($body['articleId'])) {
-                throw new Exception("文章编号不能为空", 400);
-            }
-            if (empty($body['title'])) {
-                throw new Exception("文章标题不能为空", 400);
-            }
-            if (empty($body['content'])) {
-                throw new Exception("文章内容不能为空", 400);
-            }
             $user = $this->_userLogin($_SERVER['PHP_AUTH_USER'],$_SERVER['PHP_AUTH_PW']);
             try {
-                $article = $this->_article->edit($body['articleId'], $body['title'], $body['content'], $user['userId']);
-                return $article;
+                $article = $this->_article->view($this->_id);
+                if ($article['userId'] != $user['userId']) {
+                    throw new Exception("你无权编辑此文章", 403);
+                }
+                $body = $this->_getBodyParams();
+                $title = empty($body['title']) ? $article['title'] : $body['title'];
+                $content = empty($body['content']) ? $article['content'] : $body['content'];
+                if ($title == $article['title'] && $content == $article['content']) {
+                    return $article;
+                }
+                return $this->_article->edit($this->_id, $title, $content, $user['userId']);
             } catch (Exception $e) {
-                if (!in_array($e->getCode(), [
-                        ErrorCode::PERMISSION_DENIED
-                        ErrorCode::ARTICLE_EDIT_FAIL
-                    ])) {
-                    throw new Exception($e->getMessage(), 400);
+                if ($e->getCode() < 100) {
+                    if ($e->getCode() == ErrorCode::ARTICLE_NOT_FOUND) {
+                        throw new Exception($e->getMessage(), 404);
+                    } else {
+                        throw new Exception($e->getMessage(), 400);
+                    }
                 } else {
-                    throw new Exception($e->getMessage(), 500);
+                    throw $e;
                 }
             }
         }
+        /**
+         * 删除文章
+         * @return [type] [description]
+         */
         public function _handleArticleDelete()
         {
-
+            $user = $this->_userLogin($_SERVER['PHP_AUTH_USER'],$_SERVER['PHP_AUTH_PW']);
+            try {
+                $article = $this->_article->view($this->_id);
+                if ($article['userId'] != $user['userId']) {
+                    throw new Exception("你无权删除此文章", 403);
+                }
+                $this->_article->delete($this->_id, $user['userId']);
+                return null;
+            } catch (Exception $e) {
+                if ($e->getCode() < 100) {
+                    if ($e->getCode() == ErrorCode::ARTICLE_NOT_FOUND) {
+                        throw new Exception($e->getMessage(), 404);
+                    } else {
+                        throw new Exception($e->getMessage(), 400);
+                    }
+                } else {
+                    throw $e;
+                }
+            }
         }
+        /**
+         * 文章列表
+         * @return [type] [description]
+         */
         public function _handleArticleList()
         {
-
+            $page = isset($_GET['page']) ? $_GET['page'] : 1;
+            $size = isset($_GET['size']) ? $_GET['size'] : 10;
+            if ($size > 100) {
+                throw new Exception("分页过大", 404);
+            }
+            $user = $this->_userLogin($_SERVER['PHP_AUTH_USER'],$_SERVER['PHP_AUTH_PW']);
+            return $this->_article->getList($user['userId'], $page, $size);
         }
         public function _handleArticleView()
         {
-
+            try {
+                return $this->_article->view($this->_id);
+            } catch (Exception $e) {
+                if ($e->getCode() == ErrorCode::ARTICLE_NOT_FOUND) {
+                    throw new Exception($e->getMessage(), 404);
+                } else {
+                    throw new Exception($e->getMessage(), 400);
+                }
+            }
         }
 
         /**
@@ -258,7 +303,7 @@
             try {
                  return $this->_user->login($PHP_AUTH_USER, $PHP_AUTH_PW);
             } catch (Exception $e) {
-                if (in_array($e->getCode,
+                if (!in_array($e->getCode(),
                     [
                         ErrorCode::PASSWORD_CANNOT_EMPTY,
                         ErrorCode::USERNAME_CANNOT_EMPTY,
