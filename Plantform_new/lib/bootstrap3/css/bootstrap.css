@@ -901,7 +901,7 @@ html {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
@@ -3232,7 +3232,7 @@ tbody.collapse.in {
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 14px;
+  font-size: 18px;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3978,8 +3978,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   height: 50px;
-  padding: 15px 15px;
-  font-size: 18px;
+  padding: 20px 20px;
+  font-size: 24px;
   line-height: 20px;
 }
 .navbar-brand:hover,
@@ -4064,8 +4064,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 .navbar-form {
@@ -4193,7 +4193,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
   }
 }
-.navbar-default {
+/*.navbar-default {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
@@ -4288,7 +4288,100 @@ fieldset[disabled] .navbar-default .btn-link:hover,
 .navbar-default .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
+}*/
+/***************************************************************/
+.navbar-default {
+  background-color: #0a0d11;
+  border-color: #9ea6c1;
 }
+.navbar-default .navbar-brand {
+  color: #b1c3d7;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #7c97b6;
+}
+.navbar-default .navbar-text {
+  color: #b1c3d7;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #b1c3d7;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #2d5178;
+  color: #b1c3d7;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #0a0d11;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #b1c3d7;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #7c97b6;
+  background-color: #9ea6c1;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #9ea6c1;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #7c97b6;
+  background-color: #9ea6c1;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #7c97b6;
+  background-color: #9ea6c1;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #7c97b6;
+  background-color: #9ea6c1;
+}
+.navbar-default .navbar-toggle {
+  border-color: #9ea6c1;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #9ea6c1;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #b1c3d7;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #b1c3d7;
+}
+.navbar-default .navbar-link {
+  color: #b1c3d7;
+}
+.navbar-default .navbar-link:hover {
+  color: #7c97b6;
+  background-color: #9ea6c1;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #b1c3d7;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #7c97b6;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #7c97b6;
+    background-color: #9ea6c1;
+  }
+}
+/**************************************************************/
 .navbar-inverse {
   background-color: #222;
   border-color: #080808;

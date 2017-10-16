@@ -16,7 +16,7 @@
             $this->load->helper('form');
             $this->load->library('form_validation');
             $this->load->library('session');
-            $this->load->model('login');
+            $this->load->model('loginModel');
         }
         /**
          * 登录
@@ -77,7 +77,7 @@
                         'username' => $username,
                         'password' => md5($password)
                         );
-                    $arr = $this->login->login_match('teacher', $data);
+                    $arr = $this->loginModel->login_match('teacher', $data);
                     $this->session->set_userdata('user', 'teacher');
                     $this->session->set_userdata('username', $username);
                     $this->session->set_userdata('teacherName', $arr['teacher_name']);
@@ -104,11 +104,31 @@
                 exit();
             }
         }
+        /**
+         * 显示页面专用方法
+         * @return [type] [description]
+         */
+        private function _display($page)
+        {
+            if (!$this->_isLogin()) {
+                echo "<script>alert('请先登录');</script>";
+                $this->_jumpTo('login');
+                exit();
+            }
+            $this->assign('user', '教师');
+            $this->assign('teacherName', $this->session->userdata('teacherName')) ;
+            $this->display("teacher/{$page}.html");
+        }
+        /**
+         * 显示教师主页
+         * @return [type] [description]
+         */
         public function index()
         {
-            if ($this->_isLogin()) {
-                $this->assign('teacherName', $this->session->userdata('teacherName')) ;
-                $this->display('teacher/index.html');
-            }
+            $this->_display('index');
+        }
+        public function showCourse()
+        {
+            $this->_display('showCourse');
         }
     }

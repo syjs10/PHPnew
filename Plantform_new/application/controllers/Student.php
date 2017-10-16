@@ -16,7 +16,7 @@
             $this->load->helper('form');
             $this->load->library('form_validation');
             $this->load->library('session');
-            $this->load->model('login');
+            $this->load->model('loginModel');
         }
         /**
          * 登录
@@ -73,7 +73,7 @@
                         'username' => $username,
                         'password' => md5($password)
                         );
-                    $arr = $this->login->login_match('student', $data);
+                    $arr = $this->loginModel->login_match('student', $data);
                     $this->session->set_userdata('user', 'student');
                     $this->session->set_userdata('username', $username);
                     $this->session->set_userdata('studentName', $arr['student_name']);

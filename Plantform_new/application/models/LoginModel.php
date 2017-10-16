@@ -2,7 +2,7 @@
     /**
     *
     */
-    class Login extends CI_Model {
+    class LoginModel extends CI_Model {
 
         function __construct() {
             parent::__construct();
