@@ -22,7 +22,7 @@
         </div>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="">课程管理</a></li>
+                <li><a href="{$base_url}/teacher/showCourse">课程管理</a></li>
                 <li><a href="">学生管理</a></li>
                 {* <li><a href="{{ base_url }}Department/index">首页</a></li>
                 <p class="navbar-text" style="color:#ccc;">面试阶段</p>

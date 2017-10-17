@@ -12,7 +12,10 @@
             $this->load->helper('form');
             $this->load->library('form_validation');
         }
-
+        public function index()
+        {
+            echo 'test';
+        }
         public function showAllCourse() {
             $courseInfo = $this->courseModel->getCourse();
             foreach ($courseInfo as $key => $value) {

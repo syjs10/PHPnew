@@ -1,5 +1,26 @@
 {extends file='./hflayout.tpl'}
+{block name=head}
+    <script>
+        // function setIframeHeight(iframe) {
+        //     if (iframe) {
+        //         var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+        //         if (iframeWin.document.body) {
+        //             iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+        //         }
+        //     }
+        // };
 
+        // window.onload = function () {
+        //     setIframeHeight(document.getElementById('window'));
+        // };
+
+        function changePage(page) {
+            var window = document.getElementById('window');
+            window.src=page;
+
+        }
+    </script>
+{/block}
 {block name=body}
     <div class="container">
         <div class="row">
@@ -8,8 +29,8 @@
                     <div class="panel-heading">操作</div>
                     <div class="panel-body">
                         <div class="list-group">
-                            <a href="" class="list-group-item">我的课程</a>
-                            <a href="" class="list-group-item">添加课程</a>
+                            <a href="javascript:void(0);" class="list-group-item" onclick="changePage('{$base_url}course/showAllCourse')">我的课程</a>
+                            <a href="javascript:void(0);" class="list-group-item" onclick="changePage('')">添加课程</a>
                         </div>
                     </div>
                 </div>

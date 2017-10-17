@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-15 18:39:22
+/* Smarty version 3.1.30, created on 2017-10-16 17:42:01
   from "/var/www/html/Plantform_new/application/views/course/index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59e33ada4ba317_35660154',
+  'unifunc' => 'content_59e47ee9ee84b2_56982248',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c7ab01132055fba20dc5e797f732040ac2e1b13c' => 
     array (
       0 => '/var/www/html/Plantform_new/application/views/course/index.html',
-      1 => 1508063780,
+      1 => 1508146920,
       2 => 'file',
     ),
   ),
@@ -21,35 +21,21 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_59e33ada4ba317_35660154 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59e47ee9ee84b2_56982248 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_122647675059e33ada48eb99_39205674', 'head');
-?>
+
+    
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16050004259e33ada4b8980_03059528', 'course');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_119034694159e47ee9ee5d53_26407648', 'course');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
-/* {block 'head'} */
-class Block_122647675059e33ada48eb99_39205674 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
-
-<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-/lib/css/course.css">
-<?php
-}
-}
-/* {/block 'head'} */
 /* {block 'course'} */
-class Block_16050004259e33ada4b8980_03059528 extends Smarty_Internal_Block
+class Block_119034694159e47ee9ee5d53_26407648 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
