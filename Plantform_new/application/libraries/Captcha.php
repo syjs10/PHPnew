@@ -1,6 +1,8 @@
 <?php
-class Captcha {
-	function buildRandomString($type=1, $length=4){
+class Captcha
+{
+	function buildRandomString($type=1, $length=4)
+	{
 		if ($type == 1){
 			$chars = join("", range(0,9));
 		} elseif($type == 2) {
@@ -15,7 +17,8 @@ class Captcha {
 		$chars = str_shuffle($chars);
 		return substr($chars, 0, $length);
 	}
-	function verifyImage( $type = 1, $length = 4, $pixel = 0, $line = 0, $sess_name="verify"){
+	function verifyImage( $type = 1, $length = 4, $pixel = 0, $line = 0, $sess_name="verify")
+	{
 
 		$width = 80;
 		$height = 32;

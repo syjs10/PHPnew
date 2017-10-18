@@ -27,6 +27,17 @@
             $this->assign('courseInfo', $courseInfo);
             $this->display('course/index.html');
         }
+        public function showTeacherCourse() {
+            $courseInfo = $this->courseModel->getTeacherCourse();
+            foreach ($courseInfo as $key => $value) {
+                $courseInfo[$key]['img_path']=base_url("../src/img/{$value['img_path']}");
+                if (mb_strlen($value['course_introduction'])>=38) {
+                    $courseInfo[$key]['course_introduction']=mb_substr($value['course_introduction'],0,38)."...";
+                }
+            }
+            $this->assign('courseInfo', $courseInfo);
+            $this->display('course/index.html');
+        }
         // public function showAllTCourse() {
         //     $course_info = $this->course_model->get_t_course($_SESSION['teacher_id']);
         //     foreach ($course_info as $key => $value) {

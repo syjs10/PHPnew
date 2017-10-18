@@ -1,14 +1,16 @@
 <?php
 
-class Upload_file {
-    
-    
+class Uploadfile
+{
+
+
     /**
      * 实现图片上传
      * @param  string $filename [input.name]
      * @return [string/bool]    [保存图片的文件名]
      */
-    function do_img_upload($filename ="myfile") {
+    function do_img_upload($filename ="myfile")
+    {
         if (is_uploaded_file($_FILES[$filename]['tmp_name'])) {
             $upload_file  = $_FILES[$filename]['tmp_name'];
             $destDir      = $_SERVER['DOCUMENT_ROOT']."/src/img/";
@@ -41,7 +43,8 @@ class Upload_file {
      * @param  string $filename [input.name]
      * @return [string/bool]    [保存文档的文件名]
      */
-    function do_doc_upload($filename ="myfile") {
+    function do_doc_upload($filename ="myfile")
+    {
         if (is_uploaded_file($_FILES[$filename]['tmp_name'])) {
             $upload_file  = $_FILES[$filename]['tmp_name'];
             $destDir      = $_SERVER['DOCUMENT_ROOT']."/src/doc/";

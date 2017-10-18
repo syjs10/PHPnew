@@ -40,8 +40,7 @@
                         'course_name' => $this->input->post('course_name'),
                         'course_introduction' =>$this->input->post('course_introduction'),
                         'img_path' => $image,
-                        'teacher_id' =>$this->session->userdata('teacher_id')
-
+                        'teacher_id' =>$this->session->userdata('teacherId')
                     );
             return $this->db->insert('course', $data);
 

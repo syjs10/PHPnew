@@ -16,6 +16,7 @@
             $this->load->helper('form');
             $this->load->library('form_validation');
             $this->load->library('session');
+
             $this->load->model('loginModel');
         }
         /**
@@ -130,5 +131,32 @@
         public function showCourse()
         {
             $this->_display('showCourse');
+        }
+        public function addCourse()
+        {
+            $this->assign('form', form_open('teacher/doAddCourse',"enctype='multipart/form-data', class='form-horizontal'"));
+            $this->assign('user', '教师');
+            $this->assign('teacherName', $this->session->userdata('teacherName')) ;
+            $this->display('teacher/addCourse.html');
+        }
+        public function doAddCourse()
+        {
+            // print_r($_FILES);
+            $this->form_validation->set_rules('course_name','课程名称', 'required');
+            $this->form_validation->set_rules('course_introduction','课程介绍','required');
+            if ($this->form_validation->run() == TRUE) {
+                $this->load->library('uploadfile');
+                $test = $this->uploadfile->do_img_upload();
+                $this->load->model('courseModel');
+                $result = $this->courseModel->saveCourse($test);
+                if ($result==true) {
+                    echo "ok";
+                } else {
+                    echo "no";
+                }
+            } else {
+                echo "row";
+            }
+
         }
     }
