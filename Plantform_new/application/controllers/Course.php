@@ -8,6 +8,7 @@
             parent::__construct();
             $this->load->model('courseModel');
             // $this->load->model('experiment_model');
+            $this->load->library('session');
             $this->load->helper('url');
             $this->load->helper('form');
             $this->load->library('form_validation');
@@ -28,7 +29,7 @@
             $this->display('course/index.html');
         }
         public function showTeacherCourse() {
-            $courseInfo = $this->courseModel->getTeacherCourse();
+            $courseInfo = $this->courseModel->getTeacherCourse($this->session->userdata('teacherId'));
             foreach ($courseInfo as $key => $value) {
                 $courseInfo[$key]['img_path']=base_url("../src/img/{$value['img_path']}");
                 if (mb_strlen($value['course_introduction'])>=38) {

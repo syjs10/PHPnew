@@ -37,6 +37,12 @@
         {
             if (null != $this->session->userdata('studentName')
              || null != get_cookie("studentLogin")) {
+                if (null == $this->session->userdata('studentName') && null != get_cookie('studentUsername')) {
+                    $this->session->set_userdata('studentUsername', get_cookie('studentUsername'));
+                    $this->session->set_userdata('studentName', get_cookie('studentName'));
+                    $this->session->set_userdata('studentId', get_cookie('studentId'));
+                    return true;
+                }
                 return true;
             } else {
                 return false;
@@ -75,11 +81,12 @@
                         );
                     $arr = $this->loginModel->login_match('student', $data);
                     $this->session->set_userdata('user', 'student');
-                    $this->session->set_userdata('username', $username);
+                    $this->session->set_userdata('studentUsername', $username);
                     $this->session->set_userdata('studentName', $arr['student_name']);
                     $this->session->set_userdata('studentId', $arr['student_id']);
-                    set_cookie("studentLogin", $username, 60 * 60 * 24);
-                    if (!empty($arr)) {
+                    set_cookie("studentUsername", $username, 60 * 60 * 24);
+                    set_cookie("studentName", $arr['student_name'], 60 * 60 * 24);
+                    set_cookie("studentId", $arr['student_id'], 60 * 60 * 24);                    if (!empty($arr)) {
                         $this->_jumpTo('index');
                         exit();
                     } else {

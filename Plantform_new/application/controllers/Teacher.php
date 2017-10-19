@@ -41,7 +41,13 @@
         private function _isLogin()
         {
             if (null != $this->session->userdata('teacherName')
-             || null != get_cookie("teacherLogin")) {
+             || null != get_cookie("teacherUsername")) {
+                if (null == $this->session->userdata('teacherName') && null != get_cookie('teacherUsername')) {
+                    $this->session->set_userdata('teacherUsername', get_cookie('teacherUsername'));
+                    $this->session->set_userdata('teacherName', get_cookie('teacherName'));
+                    $this->session->set_userdata('teacherId', get_cookie('teacherId'));
+                    return true;
+                }
                 return true;
             } else {
                 return false;
@@ -80,10 +86,12 @@
                         );
                     $arr = $this->loginModel->login_match('teacher', $data);
                     $this->session->set_userdata('user', 'teacher');
-                    $this->session->set_userdata('username', $username);
+                    $this->session->set_userdata('TeacherUsername', $username);
                     $this->session->set_userdata('teacherName', $arr['teacher_name']);
                     $this->session->set_userdata('teacherId', $arr['teacher_id']);
-                    set_cookie("teacherLogin", $username, 60 * 60 * 24);
+                    set_cookie("teacherUsername", $username, 60 * 60 * 24);
+                    set_cookie("teacherName", $arr['teacher_name'], 60 * 60 * 24);
+                    set_cookie("teacherId", $arr['teacher_id'], 60 * 60 * 24);
                     if (!empty($arr)) {
                         $this->_jumpTo('index');
                         exit();
