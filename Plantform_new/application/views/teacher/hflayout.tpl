@@ -8,7 +8,7 @@
     </style>
 {/block}
 {block name=header}
-    <nav class="navbar navbar-default" role="navigation" style="border-radius: 0 !important;">
+    <nav class="navbar navbar-default" role="navigation" style="border-radius: 0 !important;border:0px !important;">
         <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"

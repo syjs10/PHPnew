@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-18 15:28:01
+/* Smarty version 3.1.30, created on 2017-10-19 22:25:21
   from "/var/www/html/Plantform_new/application/views/teacher/container.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59e70281e92834_30127157',
+  'unifunc' => 'content_59e8b5d1dab2d5_17343622',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,22 +21,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./hflayout.tpl' => 1,
   ),
 ),false)) {
-function content_59e70281e92834_30127157 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59e8b5d1dab2d5_17343622 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_105374565459e70281e86bd0_68993801', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_39195560059e8b5d1d7b544_27939908', 'head');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_54617371759e70281e91828_67039538', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_116329796359e8b5d1da6fc5_21229291', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:./hflayout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'head'} */
-class Block_105374565459e70281e86bd0_68993801 extends Smarty_Internal_Block
+class Block_39195560059e8b5d1d7b544_27939908 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -68,14 +68,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'container'} */
-class Block_20061814159e70281e8fac0_81767096 extends Smarty_Internal_Block
+class Block_146961501359e8b5d1d9f2d3_62202859 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 }
 /* {/block 'container'} */
 /* {block 'body'} */
-class Block_54617371759e70281e91828_67039538 extends Smarty_Internal_Block
+class Block_116329796359e8b5d1da6fc5_21229291 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -96,7 +96,7 @@ teacher/addCourse')">添加课程</a>
                 </div>
             </div>
             <div class="col-md-9 col-xs-12"><?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20061814159e70281e8fac0_81767096', 'container', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_146961501359e8b5d1d9f2d3_62202859', 'container', $this->tplIndex);
 ?>
 </div>
         </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-18 15:28:01
+/* Smarty version 3.1.30, created on 2017-10-19 22:40:35
   from "/var/www/html/Plantform_new/application/views/teacher/hflayout.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59e70281ea7058_02506591',
+  'unifunc' => 'content_59e8b963ea4270_33921938',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3a45e5b62ac4b438c1f188975f24d79501c1a7a9' => 
     array (
       0 => '/var/www/html/Plantform_new/application/views/teacher/hflayout.tpl',
-      1 => 1508249597,
+      1 => 1508424034,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_59e70281ea7058_02506591 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59e8b963ea4270_33921938 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_29349312559e70281e9a776_83597338', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2688135359e8b963e828a0_61517247', 'head');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_47563952559e70281ea5356_82843432', 'header');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_73821285759e8b963ea0733_53999821', 'header');
 ?>
 
 
@@ -40,7 +40,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_47563952559e70281e
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'head'} */
-class Block_29349312559e70281e9a776_83597338 extends Smarty_Internal_Block
+class Block_2688135359e8b963e828a0_61517247 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -55,12 +55,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'header'} */
-class Block_47563952559e70281ea5356_82843432 extends Smarty_Internal_Block
+class Block_73821285759e8b963ea0733_53999821 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-    <nav class="navbar navbar-default" role="navigation" style="border-radius: 0 !important;">
+    <nav class="navbar navbar-default" role="navigation" style="border-radius: 0 !important;border:0px !important;">
         <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
