@@ -1,0 +1,1443 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sha1",
+				"SHA1"
+			],
+			[
+				"me",
+				"method"
+			],
+			[
+				"input",
+				"inputPassword"
+			],
+			[
+				"en",
+				"encryption"
+			],
+			[
+				"in",
+				"invalidUrls"
+			],
+			[
+				"fro",
+				"foreach\tforeach …"
+			],
+			[
+				"dis",
+				"dispatch"
+			],
+			[
+				"resp",
+				"responseStatus"
+			],
+			[
+				"route",
+				"routeCallback"
+			],
+			[
+				"rout",
+				"routePath"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"glo",
+				"global"
+			],
+			[
+				"mysqli_re",
+				"mysqli_result"
+			],
+			[
+				"mysql",
+				"mysql_connect"
+			],
+			[
+				"mysq",
+				"mysql_connect"
+			],
+			[
+				"comm",
+				"CommandOutputDocument"
+			],
+			[
+				"add",
+				"addDocument"
+			],
+			[
+				"streamd",
+				"StreamDocument"
+			],
+			[
+				"res",
+				"resource"
+			],
+			[
+				"Do",
+				"DocumentStore"
+			],
+			[
+				"nosde",
+				"nodesetA"
+			],
+			[
+				"m_iN",
+				"m_iNodeIndexA"
+			],
+			[
+				"m_p",
+				"m_pEdge"
+			],
+			[
+				"no",
+				"nodeBInSetLabel"
+			],
+			[
+				"node",
+				"nodeBInSetLabel"
+			],
+			[
+				"noAi",
+				"nodeAIndex"
+			],
+			[
+				"nodeBIn",
+				"nodeBInSetLabel"
+			],
+			[
+				"nodeAI",
+				"nodeAInSetLabel"
+			],
+			[
+				"nodeA",
+				"nodeAIsInSet"
+			],
+			[
+				"miin",
+				"m_iNodeIndexA"
+			],
+			[
+				"edge",
+				"edgeVec"
+			],
+			[
+				"edg",
+				"edgeVec"
+			],
+			[
+				"m_i",
+				"m_iWeightValue"
+			],
+			[
+				"ed",
+				"edgeVec"
+			],
+			[
+				"m_c",
+				"m_iCapacity"
+			],
+			[
+				"cl",
+				"console"
+			],
+			[
+				"pa",
+				"parents\t.parents()"
+			],
+			[
+				"col",
+				"console"
+			],
+			[
+				"sub",
+				"submit\t.submit()"
+			],
+			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"ma",
+				"maxlength\tAttr"
+			],
+			[
+				"pNo",
+				"pNodeA"
+			],
+			[
+				"cmap",
+				"CMap"
+			],
+			[
+				"pri",
+				"private"
+			],
+			[
+				"page",
+				"pageNum"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"Stu",
+				"StudentModel"
+			],
+			[
+				"calluserfu",
+				"call_user_func_array"
+			],
+			[
+				"data",
+				"datastr"
+			],
+			[
+				"D",
+				"Department"
+			],
+			[
+				"Depa",
+				"DepartmentModel"
+			],
+			[
+				"class",
+				"classLoaded"
+			],
+			[
+				"error",
+				"errorMsg"
+			],
+			[
+				"_",
+				"_POST"
+			],
+			[
+				"post",
+				"_POST"
+			],
+			[
+				"Test",
+				"testModel"
+			],
+			[
+				"url",
+				"urlArr"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"par",
+				"parse_str"
+			],
+			[
+				"app",
+				"APP_PATH"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"denf",
+				"define"
+			],
+			[
+				"ins",
+				"insertData"
+			],
+			[
+				"sta",
+				"static"
+			],
+			[
+				"path",
+				"patharr"
+			],
+			[
+				"str_rep",
+				"str_replace"
+			],
+			[
+				"vis",
+				"visible"
+			],
+			[
+				"a",
+				"append\t.append()"
+			],
+			[
+				"ch",
+				"children\t.children()"
+			],
+			[
+				"deg",
+				"debugger"
+			],
+			[
+				"te",
+				"templ"
+			],
+			[
+				"p",
+				"placeholder\tAttr"
+			],
+			[
+				"replace",
+				"replaceWith\t.replaceWith()"
+			],
+			[
+				"new",
+				"new_col"
+			],
+			[
+				"del",
+				"delButton"
+			],
+			[
+				"opt",
+				"opt_td"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"func_get_",
+				"func_get_args"
+			],
+			[
+				"curl",
+				"curl_errno"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"border",
+				"border-right"
+			],
+			[
+				"fonts",
+				"font-size"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"bacg",
+				"background-color"
+			],
+			[
+				"bacground",
+				"background-origin"
+			],
+			[
+				"show",
+				"showStudentLogin"
+			],
+			[
+				"showStuden",
+				"showStudentLogin"
+			],
+			[
+				"teacher",
+				"teacher_name"
+			],
+			[
+				"student",
+				"studentData"
+			],
+			[
+				"stu",
+				"student_num"
+			],
+			[
+				"studnet",
+				"student_class"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"pading",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"course",
+				"course"
+			],
+			[
+				"stud",
+				"student_num"
+			],
+			[
+				"STUDENT",
+				"student_name"
+			],
+			[
+				"status",
+				"statusTxt"
+			],
+			[
+				"num",
+				"numInt"
+			],
+			[
+				"htm",
+				"htmlspecialchars"
+			],
+			[
+				"warp",
+				"wrapper"
+			],
+			[
+				"fuc",
+				"functools"
+			],
+			[
+				"__",
+				"__pool"
+			],
+			[
+				"pool",
+				"__pool"
+			],
+			[
+				"de",
+				"destory_pool"
+			],
+			[
+				"user",
+				"user_name"
+			],
+			[
+				"fo",
+				"FloatField"
+			],
+			[
+				"lo",
+				"logging"
+			],
+			[
+				"is",
+				"isinstance"
+			],
+			[
+				"prim",
+				"primary_key"
+			],
+			[
+				"fied",
+				"fields"
+			],
+			[
+				"primer",
+				"primary_key"
+			],
+			[
+				"primary",
+				"primaryKey"
+			],
+			[
+				"table",
+				"tableName"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"re",
+				"range"
+			],
+			[
+				"lcoa",
+				"local_school"
+			],
+			[
+				"name",
+				"nameInput"
+			],
+			[
+				"pro",
+				"ProductTable"
+			],
+			[
+				"th",
+				"thead"
+			],
+			[
+				"P",
+				"ProductCategoryRow"
+			],
+			[
+				"Si",
+				"SignUpDialog"
+			],
+			[
+				"hand",
+				"handleChange"
+			],
+			[
+				"han",
+				"handleChange"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "test1.php",
+			"settings":
+			{
+				"buffer_size": 67,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "=> /var/www/html/modernPHP/test1.php\n    |+| 5\n",
+			"settings":
+			{
+				"buffer_size": 47,
+				"line_ending": "Unix",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 446.0,
+		"last_filter": "ip",
+		"selected_items":
+		[
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"setjq",
+				"Snippet: jQuery.ajax"
+			],
+			[
+				"pic",
+				"Package Control: Install Package"
+			],
+			[
+				"Om",
+				"OmniMarkupPreviewer: Preview Current Markup in Browser"
+			],
+			[
+				"auto",
+				"Toggle AutoSave: current file only"
+			],
+			[
+				"a",
+				"Set Syntax: ActionScript"
+			],
+			[
+				"mp",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"om",
+				"Preferences: OmniMarkupPreviewer Settings – Default"
+			],
+			[
+				"remov",
+				"Preferences: OmniMarkupPreviewer Settings – Default"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"paci",
+				"Package Control: Install Package"
+			],
+			[
+				"babel",
+				"BracketHighlighter: Toggle Global Enable"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"col",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Package Control:in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"pacakin",
+				"Package Control: Install Package"
+			],
+			[
+				"insatll",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			]
+		],
+		"width": 615.0
+	},
+	"console":
+	{
+		"height": 185.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/var/www/html/modernPHP"
+	],
+	"file_history":
+	[
+		"/home/syjs10/www/modernPHP/untitled.sublime-project",
+		"/home/syjs10/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/syjs10/.config/sublime-text-3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/home/syjs10/.config/sublime-text-3/Packages/User/Xdebug.sublime-settings",
+		"/var/www/html/modernPHP/data.txt",
+		"/var/www/html/modernPHP/DirtyWordsFilter.php",
+		"/var/www/html/modernPHP/post.php",
+		"/var/www/html/modernPHP/Password.php",
+		"/var/www/html/modernPHP/Document.php",
+		"/var/www/html/modernPHP/password.php",
+		"/var/www/html/modernPHP/url_scaner_app/src/Url/Scanner.php",
+		"/var/www/html/modernPHP/url_scaner_app/scan.php",
+		"/var/www/html/modernPHP/url_scaner_app/composer.json",
+		"/var/www/html/modernPHP/url_scaner_app/urls.csv",
+		"/var/www/html/modernPHP/test.php",
+		"/var/www/html/modernPHP/bindTo.php",
+		"/var/www/html/modernPHP/function.php",
+		"/var/www/html/modernPHP/generator.php",
+		"/var/www/html/modernPHP/index.php",
+		"/var/www/html/GCN/app/model/StudentModel.php",
+		"/var/www/html/GCN/app/controller/DepartmentCtrl.php",
+		"/var/www/html/GCN/app/view/stuSubmit.html",
+		"/var/www/html/GCN/app/view/unhiredStu.html",
+		"/var/www/html/GCN/app/view/stuInfoWithReview.html",
+		"/var/www/html/GCN/app/view/rootConflictStu.html",
+		"/var/www/html/GCN/app/view/hiredStu.html",
+		"/var/www/html/GCN/core/lib/UsefulCtrl/ShowVerifyCtrl.php",
+		"/var/www/html/GCN/app/view/interview.html",
+		"/var/www/html/GCN/app/view/conflictStu.html",
+		"/var/www/html/GCN/app/view/login.html",
+		"/var/www/html/GCN/app/view/template/footer.html",
+		"/var/www/html/GCN/app/view/root.html",
+		"/var/www/html/GCN/app/view/rootlogin.html",
+		"/var/www/html/GCN/app/view/choose.html",
+		"/var/www/html/GCN/app/view/rePwd.html",
+		"/var/www/html/GCN/app/controller/RootCtrl.php",
+		"/home/syjs10/桌面/signup.html",
+		"/var/www/html/GCN/app/view/departmentIndex.html",
+		"/var/www/html/GCN/composer.json",
+		"/var/www/html/GCN/app/view/template/hflayout.html",
+		"/home/syjs10/Geass/app/controller/IndexCtrl.php",
+		"/home/syjs10/Geass/app/view/index.html",
+		"/home/syjs10/Geass/composer.json",
+		"/home/syjs10/code_old/c/data_structures/map/kruskalTree/CMap.h",
+		"/home/syjs10/code_old/c/data_structures/map/link/Edge.h",
+		"/home/syjs10/code_old/c/data_structures/map/link/Edge.cpp",
+		"/home/syjs10/code_old/c/data_structures/map/link/CMap.h",
+		"/home/syjs10/code_old/c/data_structures/map/link/CMap.cpp",
+		"/home/syjs10/www/GCN/app/view/stuSubmit.html",
+		"/var/www/html/GCN/app/view/template/stulayout.html",
+		"/var/www/html/GCN/app/view/template/layout.html",
+		"/var/www/html/GCN/app/view/css/main.css",
+		"/var/www/html/GCN/app/view/message.html",
+		"/var/www/html/GCN/app/view/stuInfo.html",
+		"/var/www/html/GCN/app/view/index.html",
+		"/var/www/html/GCN/core/lib/Model.php",
+		"/var/www/html/GCN/core/Common.php",
+		"/var/www/html/GCN/app/view/template/header.html",
+		"/var/www/html/GCN/vendor/catfan/medoo/src/Medoo.php",
+		"/var/www/html/GCN/app/controller/StudentCtrl.php",
+		"/var/www/html/GCN/app/view/css/headfooter.css",
+		"/var/www/html/GCN/app/model/DepartmentModel.php",
+		"/var/www/html/GCN/app/controller/IndexCtrl.php",
+		"/var/www/html/GCN/core/lib/Cookie.php",
+		"/var/www/html/GCN/core/lib/Session.php",
+		"/var/www/html/GCN/database/data.sql",
+		"/var/www/html/GCN/core/lib/View.php",
+		"/var/www/html/GCN/core/Start.php",
+		"/var/www/html/GCN/.htaccess",
+		"/var/www/html/GCN/app/controller/MessageCtrl.php",
+		"/var/www/html/GCN/app/model/ReviewModel.php",
+		"/var/www/html/GCN/app/view/student.html",
+		"/var/www/html/GCN/log/2017081215/database.php",
+		"/var/www/html/GCN/core/Core.php",
+		"/var/www/html/GCN/core/lib/Route.php",
+		"/var/www/html/GCN/index.php",
+		"/var/www/html/GCN/log/2017080918/login.php",
+		"/var/www/html/GCN/app/model/TestModel.php",
+		"/var/www/html/GCN/core/lib/Input.php",
+		"/var/www/html/GCN/core/function.php",
+		"/var/www/html/GCN/config/config.php",
+		"/var/www/html/GCN/core/lib/Log.php",
+		"/var/www/html/GCN/core/lib/LogFile.php",
+		"/var/www/html/GCN/core/lib/Ctrl.php",
+		"/home/syjs10/www/Plantform/application/views/login/studentLogin.html",
+		"/var/www/html/GCN/app/view/template_c/91/9119a5ea5e67a59952bccbb218ab976dbdc02760361ec3ec70357032e8ea8791.php",
+		"/var/www/html/Plantform/application/.htaccess",
+		"/home/syjs10/Geass/core/Common.php",
+		"/home/syjs10/Geass/core/Core.php",
+		"/home/syjs10/Geass/core/lib/UsefulCtrl/ShowVerifyCtrl.php",
+		"/home/syjs10/Geass/core/lib/UsetfulCtrl/ShowVerifyCtrl.php",
+		"/home/syjs10/Geass/Component/VerifyCode.php",
+		"/home/syjs10/Geass/index.php",
+		"/home/syjs10/Geass/core/Start.php",
+		"/home/syjs10/Geass/core/lib/View.php",
+		"/home/syjs10/Geass/core/lib/Route.php",
+		"/home/syjs10/Geass/core/lib/Log.php",
+		"/home/syjs10/Geass/core/lib/LogFile.php",
+		"/home/syjs10/Geass/log/2017080614/log.php",
+		"/var/www/html/diy/.htaccess",
+		"/home/syjs10/Geass/.htaccess",
+		"/home/syjs10/Geass/core/lib/Model.php",
+		"/home/syjs10/Geass/core/lib/Ctrl.php",
+		"/home/syjs10/Geass/app/model/TestModel.php",
+		"/home/syjs10/Geass/lib/Route.php",
+		"/home/syjs10/Geass/core/Main.php",
+		"/home/syjs10/Geass/config/config.php",
+		"/home/syjs10/Geass/README.md",
+		"/var/www/html/guestbook/app/model/guestbookModel.php",
+		"/var/www/html/guestbook/core/common/function.php",
+		"/var/www/html/guestbook/app/ctrl/indexCtrl.php",
+		"/var/www/html/guestbook/app/views/index.html",
+		"/var/www/html/guestbook/index.php",
+		"/var/www/html/guestbook/core/imooc.php",
+		"/var/www/html/guestbook/app/views/layout.html",
+		"/var/www/html/guestbook/core/config/url.php",
+		"/var/www/html/guestbook/core/lib/model.php",
+		"/var/www/html/guestbook/app/views/add.html",
+		"/var/www/html/diy_blackboard/app/model/cModel.php",
+		"/var/www/html/diy_blackboard/data.sql",
+		"/var/www/html/diy/app/ctrl/indexCtrl.php",
+		"/var/www/html/diy/app/views/test.html",
+		"/var/www/html/diy/app/views/index.html",
+		"/var/www/html/diy/app/views/layout.html",
+		"/var/www/html/diy/core/imooc.php",
+		"/var/www/html/diy/core/config/database.php",
+		"/var/www/html/diy/core/lib/model.php",
+		"/var/www/html/diy/composer.json"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 129.0,
+		"where_history":
+		[
+			"/home/syjs10/Geass",
+			"<open files>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ctrl+alt+F9",
+			"Xdebug",
+			"debug",
+			"');",
+			"code",
+			"...\n",
+			"ClassName",
+			"DirtyWordsFilter",
+			"php",
+			"code",
+			">\n",
+			"nodeSe",
+			"*/\n",
+			"setValueToMatrixForUndirectedGraph",
+			"1",
+			"edgeCount",
+			"minWeight",
+			"edgVec",
+			"getUnhiredStu",
+			"Department",
+			"setValueToMatrixUndirectGraph",
+			"pNodeH",
+			"getUnhiredStu",
+			"pageNum",
+			"getCo",
+			"choose",
+			"getHiredStu",
+			"choose",
+			"type",
+			"description",
+			"argument",
+			"\t\n",
+			"信息类",
+			"return",
+			"value",
+			"pageNum",
+			"dataStr",
+			"getCount",
+			";\n",
+			"select",
+			"');\n",
+			"StudentModel",
+			"招新页面",
+			"lib",
+			"();\n",
+			"base_url",
+			"return",
+			"'*');\n",
+			"\t\t\t\n",
+			"',",
+			"action",
+			"attr",
+			"();\n",
+			"td",
+			"\n\t",
+			"html",
+			"?>",
+			"$this->showTeacherPage(); \n\t\t\texit; ",
+			"\t\t\n",
+			"}\n",
+			"sm",
+			"/')\" ",
+			"%;\"></",
+			"onfocus=\"javascript:this.className='active';\" class=\"\"",
+			"();\n",
+			"studentFramePage",
+			"html",
+			"/**\n\t * 学生选择页面\n\t * @param  [type] $page [页面文件地址]\n\t */\n\tpublic function studentFramePage($page) {      \n\t\t$this->display('student/'.$page);\n\t}",
+			"framePage",
+			"$data",
+			");\n",
+			"\"])",
+			"],",
+			"await",
+			"\t\n",
+			"loop",
+			"yield from",
+			"if",
+			"   =",
+			"page_list",
+			" \n",
+			"}",
+			"ProductCategroyRow",
+			"handle",
+			"high",
+			"highlight",
+			"hight",
+			")}",
+			"no",
+			"docker_ps",
+			"HEADER",
+			"right_bar",
+			">\n",
+			"course_id",
+			"\t\t\t\n",
+			"show_course",
+			"show_all_course",
+			"teacher_id",
+			"fillable",
+			"');\n",
+			"});"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"data",
+			"= $('<td></td>');\n                var confirmBtn = $('<a href=\"javascript:;\" class=\"optLink\">确认 &nbsp;</a>');\n                var cancelBtn = $(",
+			"yield from",
+			"await"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "test1.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 67,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							],
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										62,
+										63
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										37,
+										38
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 47,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 83.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.7,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 172.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"23":
+				{
+					"group": 0,
+					"index": 0
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 341.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
