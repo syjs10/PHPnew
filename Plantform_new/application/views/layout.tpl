@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="{$base_url}/lib/bootstrap3/css/bootstrap.css">
-    <script src="{$base_url}/lib/bootstrap3/js/jquery.min.js"></script>
-    <script src="{$base_url}/lib/bootstrap3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{$base_url}lib/bootstrap3/css/bootstrap.css">
+    <script src="{$base_url}lib/bootstrap3/js/jquery.min.js"></script>
+    <script src="{$base_url}lib/bootstrap3/js/bootstrap.min.js"></script>
 </head>
 <body>
     {block name=header}{/block}

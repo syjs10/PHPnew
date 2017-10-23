@@ -1,0 +1,45 @@
+{extends file="../layout.tpl"}
+{block name=head}
+    <link rel="stylesheet" href="{$base_url}/lib/css/courseInfo.css">
+{/block}
+
+{block name=body}
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            课程信息
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4 col-xs-4">
+                    <div class="image">
+                        <img src="{$courseInfo['img_path']}" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="row"><h3>{$courseInfo['course_name']}</h3></div>
+                    <div class="row">{$courseInfo['course_introduction']}</div>
+                </div>
+            </div>
+            <div class="panel panel-default" style="margin-top:20px;">
+                <div class="panel-heading">
+                    实验项目
+                </div>
+                <div class="panel-body">
+                    {* <button type="" class="btn btn-success" onclick="location.href='{$base_url}index.php/teacher_action/addExperiment/{$courseInfo['course_id']}'">添加实验</button> *}
+                    <ul class="list-group">
+                        {foreach from=$expInfo item=value}
+                            <li class="list-group-item"  style="margin-top:10px;">
+                                {$value['exp_name']}
+                                <button onclick='location.href="{$base_url}index.php/course/showExperiment/{$value['exp_id']}"'>开始实验</button>
+                                <button onclick='"{$value['exp_doc_path']}"' >实验文档</button>
+                            </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{/block}

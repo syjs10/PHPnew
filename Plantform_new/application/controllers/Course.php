@@ -1,22 +1,28 @@
 <?php
     /**
-    *
+    *   课程类
+    *   负责显示课程列表和信息
     */
     class Course extends CI_Controller {
 
         function __construct() {
             parent::__construct();
             $this->load->model('courseModel');
-            // $this->load->model('experiment_model');
+            $this->load->model('experimentModel');
             $this->load->library('session');
             $this->load->helper('url');
             $this->load->helper('form');
             $this->load->library('form_validation');
         }
+
         public function index()
         {
             echo 'test';
         }
+        /**
+         * 显示所有课程(主要用于嵌入其他模块)
+         * @return [type] [description]
+         */
         public function showAllCourse() {
             $courseInfo = $this->courseModel->getCourse();
             foreach ($courseInfo as $key => $value) {
@@ -28,6 +34,10 @@
             $this->assign('courseInfo', $courseInfo);
             $this->display('course/index.html');
         }
+        /**
+         * 显示教师的自己创建的课程
+         * @return [type] [description]
+         */
         public function showTeacherCourse() {
             $courseInfo = $this->courseModel->getTeacherCourse($this->session->userdata('teacherId'));
             foreach ($courseInfo as $key => $value) {
@@ -51,20 +61,26 @@
         //     $this->ci_smarty->assign('course_info', $course_info);
         //     $this->display('course/showAllCourse.php');
         // }
-        // public function showCourse($course_id){
-        //     $exp_info = $this->experiment_model->get_exp_c($course_id);
-        //     foreach ($exp_info as $key => $value) {
-        //         $exp_info[$key]['exp_doc_path']=base_url("../src/doc/{$value['exp_doc_path']}");
-        //     }
-        //     $this->ci_smarty->assign('base_url', site_url());
-        //     $this->ci_smarty->assign('exp_info', $exp_info);
-        //     $this->ci_smarty->assign('course_id', $course_id);
-        //     $this->display('course/showCourse.php');
-        // }
+        /**
+         * 显示课程的主要信息与实验列表
+         * @param  [type] $course_id [课程编号]
+         * @return [type]            [description]
+         */
+        public function courseInfo($courseId){
+            $courseInfo = $this->courseModel->getOneCourse($courseId);
+            $courseInfo['img_path']=base_url("../src/img/{$courseInfo['img_path']}");
+            $expInfo = $this->experimentModel->getExpByCouresId($courseId);
+            foreach ($expInfo as $key => $value) {
+                $expInfo[$key]['exp_doc_path']=base_url("../src/doc/{$value['exp_doc_path']}");
+            }
+            $this->assign('expInfo', $expInfo);
+            $this->assign('courseInfo', $courseInfo);
+            $this->display('course/course.html');
+        }
         // public function showExperiment($exp_id){
-        //     $exp_info = $this->experiment_model->get_exp_e($exp_id);
-        //     $exp_info['exp_doc_path']=base_url("../src/doc/{$exp_info['exp_doc_path']}");
-        //     $this->ci_smarty->assign('exp_info', $exp_info);
+        //     $expInfo = $this->experiment_model->get_exp_e($exp_id);
+        //     $expInfo['exp_doc_path']=base_url("../src/doc/{$expInfo['exp_doc_path']}");
+        //     $this->ci_smarty->assign('expInfo', $expInfo);
         //     $this->ci_smarty->assign('base_url', site_url());
         //     $this->display('course/showExperiment.php');
         // }
