@@ -1,6 +1,6 @@
 <?php
 	/**
-	* 
+	*
 	*/
 	class Teacher_action extends CI_Controller {
 

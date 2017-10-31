@@ -32,9 +32,8 @@ class Login extends CI_Controller {
 	}
 	public function showTeacherLogin() {
 		if (NULL != $this->session->userdata('teacher_name') || get_cookie("teacherLogin") != NULL) {
-			$this->showTeacherPage(); 
-			exit; 
-			
+			$this->showTeacherPage();
+			exit;
 		}
 		$form = form_open('login/doTeacherLogin','class="form-horizontal",role="form"');
 		$this->ci_smarty->assign('form', $form);
@@ -48,9 +47,9 @@ class Login extends CI_Controller {
 	 */
 	function doTeacherLogin() {
 		if (NULL != $this->session->userdata('teacher_name') || get_cookie("teacherLogin") != NULL) {
-			$this->showTeacherPage(); 
-			exit; 
-			
+			$this->showTeacherPage();
+			exit;
+
 		}
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
@@ -61,7 +60,7 @@ class Login extends CI_Controller {
 			$verify = $this->input->post('verify');
 			if ($_SESSION['verify'] == $verify) {
 				$data = array(
-					'username' => $username, 
+					'username' => $username,
 					'password' => md5($password)
 					);
 				$arr = $this->login_model->login_match('teacher', $data);
@@ -73,19 +72,19 @@ class Login extends CI_Controller {
 										//教师登陆后页面
 										// echo $this->session->userdata('username')."页面";
 				if ($arr) {
-					$this->showTeacherPage();  
+					$this->showTeacherPage();
 				} else {
 					echo "<script>alert('用户名密码错误');</script>";
 					$this->showTeacherLogin();
 				}
-				
+
 			} else {
 				echo "<script>alert('验证码错误');</script>";
 				$form = form_open('login/doTeacherLogin','class="form-horizontal",role="form"');
 				$this->ci_smarty->assign('form', $form);
 				$this->display('login/teacherLogin.html');
 			}
-			
+
 		} else {
 			echo "<script>alert('表单不能为空');</script>";
 			$form = form_open('login/doTeacherLogin','class="form-horizontal",role="form"');
@@ -106,16 +105,16 @@ class Login extends CI_Controller {
 			$this->showTeacherLogin();
 		}
 
-		
+
 	}
 	/**
 	 * 教师选择页面
 	 * @param  [type] $page [页面文件地址]
 	 */
-	public function teacherFramePage($page) {      
+	public function teacherFramePage($page) {
 		$this->display('teacher/'.$page);
 	}
-	
+
 
 
 
@@ -126,8 +125,8 @@ class Login extends CI_Controller {
 	 */
 	public function showStudentLogin() {
 		if ($this->session->userdata('student_name') != NULL || get_cookie("studentLogin") != NULL) {
-			$this->showStudentPage(); 
-			exit; 
+			$this->showStudentPage();
+			exit;
 		}
 		$form = form_open('login/doStudentLogin','class="form-horizontal",role="form"');
 		$this->ci_smarty->assign('form', $form);
@@ -143,8 +142,8 @@ class Login extends CI_Controller {
 	 */
 	function doStudentLogin() {
 		if ($this->session->userdata('student_name') != NULL || get_cookie("studentLogin") != NULL) {
-			$this->showStudentPage(); 
-			exit; 
+			$this->showStudentPage();
+			exit;
 			// header('location:showStudentPage');
 		}
 		$this->form_validation->set_rules('username', 'Username', 'required');
@@ -156,7 +155,7 @@ class Login extends CI_Controller {
 			$verify = $this->input->post('verify');
 			if ($_SESSION['verify'] == $verify) {
 				$data = array(
-					'username' => $username, 
+					'username' => $username,
 					'password' => md5($password)
 					);
 				$arr = $this->login_model->login_match('student', $data);
@@ -169,20 +168,20 @@ class Login extends CI_Controller {
 										//学生登陆后页面
 										// echo $this->session->userdata('student_name')."页面";
 				if ($arr) {
-					$this->showStudentPage();  
+					$this->showStudentPage();
 				} else {
 					echo "<script>alert('用户名密码错误');</script>";
 					$this->showStudentLogin();
-					
+
 				}
-				
+
 			} else {
 				echo "<script>alert('验证码错误');</script>";
 				$form = form_open('login/doStudentLogin','class="form-horizontal",role="form"');
 				$this->ci_smarty->assign('form', $form);
 				$this->display('login/studentLogin.html');
 			}
-			
+
 		} else {
 			echo "<script>alert('表单不能为空');</script>";
 			header('Location:./login/showStudentLogin');
@@ -197,13 +196,13 @@ class Login extends CI_Controller {
 		} else {
 			$this->showStudentLogin();
 		}
-		
+
 	}
 	/**
 	 * 学生选择页面
 	 * @param  [type] $page [页面文件地址]
 	 */
-	public function studentFramePage($page) {      
+	public function studentFramePage($page) {
 		$this->display('student/'.$page);
 	}
 
