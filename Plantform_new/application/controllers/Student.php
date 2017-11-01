@@ -86,7 +86,8 @@
                     $this->session->set_userdata('studentId', $arr['student_id']);
                     set_cookie("studentUsername", $username, 60 * 60 * 24);
                     set_cookie("studentName", $arr['student_name'], 60 * 60 * 24);
-                    set_cookie("studentId", $arr['student_id'], 60 * 60 * 24);                    if (!empty($arr)) {
+                    set_cookie("studentId", $arr['student_id'], 60 * 60 * 24);
+                    if (!empty($arr)) {
                         $this->_jumpTo('index');
                         exit();
                     } else {

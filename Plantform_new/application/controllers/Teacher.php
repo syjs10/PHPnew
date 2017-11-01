@@ -16,7 +16,7 @@
             $this->load->helper('form');
             $this->load->library('form_validation');
             $this->load->library('session');
-
+            $this->load->model('experimentModel');
             $this->load->model('loginModel');
         }
         /**
@@ -136,10 +136,17 @@
         {
             $this->_display('index');
         }
+        /**
+         * 显示课程
+         * @return [type] [description]
+         */
         public function showCourse()
         {
             $this->_display('showCourse');
         }
+        /**
+         *  显示添加课程页面
+         */
         public function addCourse()
         {
             $this->assign('form', form_open('teacher/doAddCourse',"enctype='multipart/form-data', class='form-horizontal'"));
@@ -147,6 +154,10 @@
             $this->assign('teacherName', $this->session->userdata('teacherName')) ;
             $this->display('teacher/addCourse.html');
         }
+        /**
+         * 添加课程
+         * @return [type] [description]
+         */
         public function doAddCourse()
         {
             // print_r($_FILES);
@@ -163,6 +174,29 @@
                     echo "no";
                 }
             } else {
+                echo "row";
+            }
+        }
+        public function addExperiment($course_id)
+        {
+            $this->assign('form', form_open('teacher/doAddExperiment',"enctype='multipart/form-data', class='form-horizontal'"));
+            $this->assign('course_id', $course_id);
+            $this->display('course/addExperiment.html');
+        }
+        public function doAddExperiment()
+        {
+            $this->form_validation->set_rules('exp_name','实验名称', 'required');
+            if ($this->form_validation->run() == TRUE)
+            {
+                $this->load->library('upload_file');
+                $test = $this->upload_file->do_doc_upload();
+                $result = $this->experimentModel->saveExp($test);
+                if ($result==true) {
+                    echo "ok";
+                } else {
+                    echo "no";
+                }
+            }else{
                 echo "row";
             }
 

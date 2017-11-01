@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-19 22:39:18
+/* Smarty version 3.1.30, created on 2017-11-01 11:19:42
   from "/var/www/html/Plantform_new/application/views/teacher/addCourse.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59e8b916431850_31120222',
+  'unifunc' => 'content_59f93d4ed4c997_18958449',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8529116dcd2a1f14531882e68a1685de86d4be69' => 
     array (
       0 => '/var/www/html/Plantform_new/application/views/teacher/addCourse.html',
-      1 => 1508310228,
+      1 => 1509506248,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_59e8b916431850_31120222 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59f93d4ed4c997_18958449 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -29,12 +29,12 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_136169269359e8b91642a615_02743507', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_48236046059f93d4ed497b3_15050099', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_136169269359e8b91642a615_02743507 extends Smarty_Internal_Block
+class Block_48236046059f93d4ed497b3_15050099 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
