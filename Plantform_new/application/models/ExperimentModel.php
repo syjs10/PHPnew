@@ -9,8 +9,8 @@
             $this->load->database();
         }
         /**
-         * 获取实验信息
-         * @return [arr] [查询结果]
+         * 通过课程ID获取实验信息
+         * @return [arrs] [查询结果]
          */
         public function getExpByCouresId($course_id) {
             $sql="SELECT *
@@ -19,6 +19,11 @@
             $query = $this->db->query($sql);
             return $query->result_array();
         }
+        /**
+         * 通过实验ID获取实验信息
+         * @param  [type] $exp_id [description]
+         * @return [arr]         [description]
+         */
         public function getExpByExpId($exp_id) {
             $sql="SELECT *
                     FROM experiment
@@ -39,7 +44,7 @@
          * @param  [type] $image [description]
          * @return [type]        [description]
          */
-        public function save_exp($text = NULL) {
+        public function saveExp($text = NULL) {
 
             $data = array(
                         'exp_name' => $this->input->post('exp_name'),

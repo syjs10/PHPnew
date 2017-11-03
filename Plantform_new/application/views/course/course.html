@@ -11,28 +11,30 @@
         </div>
         <div class="panel-body">
             <div class="row">
-                <div class="col-md-4 col-xs-4">
-                    <div class="image">
+                <div class="col-md-4 col-xs-6">
+                    <div class="image" style="margin-bottom: 10px;">
                         <img src="{$courseInfo['img_path']}" alt="" width="100%" height="100%">
                     </div>
                 </div>
-                <div class="col-md-8 col-xs-8">
+                <div class="col-md-8 col-xs-6">
                     <div class="row"><h3>{$courseInfo['course_name']}</h3></div>
                     <div class="row">{$courseInfo['course_introduction']}</div>
                 </div>
             </div>
+                {if $courseInfo['teacher_name'] == $smarty.session.teacherName}
+                    <button type="" class="btn btn-success" style="margin-top: 10px;margin-buttom:10px;" onclick="location.href='{$base_url}teacher/addExperiment/{$courseInfo['course_id']}'">添加实验</button>
+                {/if}
 
-                    <button type="" class="btn btn-success" onclick="location.href='{$base_url}teacher/addExperiment/{$courseInfo['course_id']}'">添加实验</button>
-                    <ul class="list-group">
-                        {foreach from=$expInfo item=value}
-                            <li class="list-group-item"  style="margin-top:10px;">
-                                {$value['exp_name']}
-                                <button class="btn btn-primary" style="float:right; margin:auto 2px;" onclick='location.href="{$base_url}index.php/course/showExperiment/{$value['exp_id']}"'>开始实验</button>
-                                <button class="btn btn-primary" style="float:right; margin:auto 2px;" onclick='"{$value['exp_doc_path']}"' >实验文档</button>
-                            </li>
-                        {/foreach}
-                    </ul>
+                <ul class="list-group">
+                    {foreach from=$expInfo item=value}
+                        <li class="list-group-item"  >
+                            {$value['exp_name']}
+                            <button class="btn btn-primary" style="float:right; margin:auto 2px;" onclick='"{$value['exp_doc_path']}"' >实验文档</button>
+                            <button class="btn btn-primary" style="float:right; margin:auto 2px;" onclick='location.href="{$base_url}Experiment/showExperiment/{$value['exp_id']}"'>开始实验</button>
 
+                        </li>
+                    {/foreach}
+                </ul>
         </div>
     </div>
 

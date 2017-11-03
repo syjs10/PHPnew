@@ -1,22 +1,14 @@
-{block name=head}
-	<style type="text/css" media="screen">
-		.container{
-			position: absolute;
-			top:10%;
-
-		}
-	</style>
-{/block}
+{extends file='../layout.tpl'}
 
 {block name=body}
 
 		<div class="container">
 		<div class="row"></div>
 		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">
+			<div class="col-md-1"></div>
+			<div class="col-md-8 col-xs-12">
 				<div class="panel panel-default">
-					<div class="panel-heading">添加实验</div>
+					<div class="panel-heading" >添加实验</div>
 					<div class="panel-body">
 						{$form}
 							<div class="form-group form-group-sm">
@@ -43,7 +35,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2"></div>
+			<div class="col-md-1"></div>
 		</div>
 		<div class="row"></div>
 	</div>

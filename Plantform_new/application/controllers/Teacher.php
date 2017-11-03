@@ -188,8 +188,8 @@
             $this->form_validation->set_rules('exp_name','实验名称', 'required');
             if ($this->form_validation->run() == TRUE)
             {
-                $this->load->library('upload_file');
-                $test = $this->upload_file->do_doc_upload();
+                $this->load->library('uploadfile');
+                $test = $this->uploadfile->do_doc_upload();
                 $result = $this->experimentModel->saveExp($test);
                 if ($result==true) {
                     echo "ok";

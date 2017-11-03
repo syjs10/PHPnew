@@ -63,7 +63,7 @@ class Uploadfile
                         return false;
                     }
                 } else {
-                    echo "<script>alert('请上传TXT的图片')</script>";
+                    echo "<script>alert('请上传TXT的文件')</script>";
                     exit();
                 }
             } else {
