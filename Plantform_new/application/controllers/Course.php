@@ -77,12 +77,6 @@
             $this->assign('courseInfo', $courseInfo);
             $this->display('course/course.html');
         }
-        public function showExperiment($exp_id){
-            $expInfo = $this->experimentModel->get_exp_e($exp_id);
-            $expInfo['exp_doc_path']=base_url("../src/doc/{$expInfo['exp_doc_path']}");
-            $this->assign('expInfo', $expInfo);
-            $this->assign('base_url', site_url());
-            $this->display('course/showExperiment.php');
-        }
+
     }
 ?>

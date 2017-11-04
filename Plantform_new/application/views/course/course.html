@@ -22,16 +22,15 @@
                 </div>
             </div>
                 {if $courseInfo['teacher_name'] == $smarty.session.teacherName}
-                    <button type="" class="btn btn-success" style="margin-top: 10px;margin-buttom:10px;" onclick="location.href='{$base_url}teacher/addExperiment/{$courseInfo['course_id']}'">添加实验</button>
+                    <button type="" class="btn btn-success" style="margin-top: 10px;" onclick="location.href='{$base_url}teacher/addExperiment/{$courseInfo['course_id']}'">添加实验</button>
                 {/if}
 
-                <ul class="list-group">
+                <ul class="list-group" style="margin-top: 10px;">
                     {foreach from=$expInfo item=value}
                         <li class="list-group-item"  >
                             {$value['exp_name']}
                             <button class="btn btn-primary" style="float:right; margin:auto 2px;" onclick='"{$value['exp_doc_path']}"' >实验文档</button>
                             <button class="btn btn-primary" style="float:right; margin:auto 2px;" onclick='location.href="{$base_url}Experiment/showExperiment/{$value['exp_id']}"'>开始实验</button>
-
                         </li>
                     {/foreach}
                 </ul>

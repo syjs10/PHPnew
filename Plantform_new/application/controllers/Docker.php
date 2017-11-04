@@ -100,12 +100,12 @@ class Docker extends CI_Controller{
      * @param  [string] $id docker id号
      * @return [string]     docker id号，用于判定是否关闭成功
      */
-    public function docker_del($id=NULL) {
+    public function dockerDel($id=NULL) {
 
         if($id != NULL){
-            $command = "docker stop {$id}";
+            $command = "docker kill {$id}";
         } else {
-            $command = "docker stop {$_SESSION['docker_info']['id']}";
+            $command = "docker kill {$_SESSION['docker_info']['id']}";
         }
 
         $output = exec($command);
@@ -113,12 +113,14 @@ class Docker extends CI_Controller{
 
             if($output == $_SESSION['docker_info']['id']){
                 unset($_SESSION['docker_info']);
-                echo $output;
+                echo "<script>history.go(-2);</script>";
             }else{
                 exit('docker close error');
             }
         } else {
-            echo $output;
+            if ($output) {
+                echo "<script>history.go(-2);</script>";
+            }
         }
     }
 
