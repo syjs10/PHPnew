@@ -48,3 +48,7 @@
     </nav>
 {/block}
 
+{block name=footer}
+    <footer style="margin:0px auto;text-align: center;">&copy; By JS</footer>
+
+{/block}

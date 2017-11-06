@@ -15,17 +15,18 @@
 
 {block name=body}
 
-<div class="container">
+
 	<div class="row">
 		<div class="col-md-9" style="padding: 0px;">
-			<iframe src="{$base_url}docker/show_docker"id="noVNC"  onload="noVNC.focus()"></iframe>
+			<iframe src="{$base_url}docker/show_docker" id="noVNC"  onload="noVNC.focus()" scrolling="no"></iframe>
 		</div>
 		<div class="col-md-3 right_bar">
-			<iframe src="{$expInfo['exp_doc_path']}"></iframe>
+			<button class="btn btn-success" onclick="location.href='{$base_url}docker/dockerDel'">关闭虚拟机</button>
+			<iframe src="{$expInfo['exp_doc_path']}" >
+			</iframe>
 		</div>
 	</div>
-</div>
-<button class="btn btn-success" onclick="location.href='{$base_url}docker/dockerDel'">关闭虚拟机</button>
+
 
 
 
