@@ -107,8 +107,39 @@
                 exit();
             }
         }
+        /**
+         * 显示主页
+         * @return [type] [description]
+         */
         public function index()
         {
-            echo "登录成功";
+            $this->_display('index');
         }
+        /**
+         * 显示课程
+         * @return [type] [description]
+         */
+        public function showCourse(){
+            $this->_display('showCourse');
+        }
+        /**
+         * 显示页面专用方法
+         * @return [type] [description]
+         */
+        private function _display($page)
+        {
+            if (!$this->_isLogin()) {
+                echo "<script>alert('请先登录');</script>";
+                $this->_jumpTo('login');
+                exit();
+            }
+            $this->assign('user', '学生');
+            $this->assign('studentName', $this->session->userdata('studentName')) ;
+            $this->display("student/{$page}.html");
+        }
+        public function chooseCourse($id)
+        {
+            echo $id;
+        }
+
     }

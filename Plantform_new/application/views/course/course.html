@@ -21,7 +21,10 @@
                     <div class="row">{$courseInfo['course_introduction']}</div>
                 </div>
             </div>
-                {if $courseInfo['teacher_name'] == $smarty.session.teacherName}
+                {if isset($smarty.session.studentName) }
+                    <button type="" class="btn btn-success" style="margin-top: 10px;" onclick="location.href='{$base_url}student/chooseCourse/{$courseInfo['course_id']}'">开始学习</button>
+                {/if}
+                {if isset($smarty.session.teacherName) && $courseInfo['teacher_name'] == $smarty.session.teacherName}
                     <button type="" class="btn btn-success" style="margin-top: 10px;" onclick="location.href='{$base_url}teacher/addExperiment/{$courseInfo['course_id']}'">添加实验</button>
                 {/if}
 
