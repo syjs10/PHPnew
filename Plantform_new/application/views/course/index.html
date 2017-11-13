@@ -15,19 +15,23 @@
                         <div class="inner">
                             <div class="image">
                                 <img src="{$value['img_path']}" alt="" width="100%" height="100%">
+
                             </div>
                             <div class="text">
                                 <div class="name">
                                     {$value['course_name']}
                                 </div>
+
                                 <div class="introduction">
                                     {$value['course_introduction']}
+
                                 </div>
+
                             </div>
-                            <div class="teacher">
-                                教师：{$value['teacher_name']}
-                            </div>
-                            <div class="cover">
+                            <div class="choose">
+                                {if isset($smarty.session.studentName) }
+                                    <button type="" class="btn btn-success" style="margin-top: 10px;" onclick="location.href='{$base_url}student/chooseCourse/{$value['course_id']}'">开始学习</button>
+                                {/if}
                             </div>
                         </div>
                     </div>

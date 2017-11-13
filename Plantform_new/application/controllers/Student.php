@@ -139,7 +139,7 @@
         }
         public function chooseCourse($id)
         {
-            echo $id;
+            echo $_SESSION['studentId'];
         }
 
     }
