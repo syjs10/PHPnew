@@ -1,4 +1,4 @@
 <?php
 return [
-    'news/:id' => 'index/index/info/',
+    'news/:id' => 'index/index/info',
 ];
