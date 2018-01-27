@@ -1,30 +1,29 @@
-# _*_ coding:utf-8 _*_
-import urllib
-import http.cookiejar
+import requests
 import pytesseract
 from PIL import Image
-print('test')
+from bs4 import BeautifulSoup
+import json
+import sys
 
-url = "http://202.199.96.30/ACTIONVALIDATERANDOMPICTURE.APPPROCESS"
-loginUrl = "http://202.199.96.30/ACTIONLOGON.APPPROCESS?mode=4&"
-img = urllib.request.urlopen(url)
-cat_img = img.read()
-print('test')
-with open('cat_500_600.jpg','wb') as f:
-    f.write(cat_img)
+# reload(sys)
+# sys.setdefaultencoding('utf-8')
 
-image = Image.open('cat_500_600.jpg')
+session = requests.session()
+valcode = requests.get('http://202.199.96.30/ACTIONVALIDATERANDOMPICTURE.APPPROCESS')
+f = open('valcode.png', 'wb')
+# 将response的二进制内容写入到文件中
+f.write(valcode.content)
+# 关闭文件流对象
+f.close()
+image = Image.open('valcode.png')
 vcode = pytesseract.image_to_string(image)
-print(vcode)
-print('test')
-postdata =urllib.parse.urlencode({
+cookie = requests.utils.dict_from_cookiejar(valcode.cookies)
+data = {
     "mode":4,
-    "WebUserNO":"150402305",
-    "Password":"21103X",
-    "Agnomen":vcode,
-
-}).encode(encoding='GB2312')
-print('test')
+    "WebUserNO":sys.argv[1],
+    "Password":sys.argv[2],
+    "Agnomen":vcode
+}
 header = {
     "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
     "Accept-Encoding":"gzip, deflate",
@@ -34,15 +33,20 @@ header = {
     "Referer":"http://202.199.96.30/index.jsp",
     "User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36"
 }
-
-req = urllib.request.Request(loginUrl,postdata,header)
-print('test')
-
-print(urllib.request.urlopen(req).read().decode('GB2312'))
-
-#自动记住cookie
-# cj = http.cookiejar.CookieJar()
-# opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
-# urllib.request.install_opener(opener)# 安装opener到全局
-# r = opener.open(req)
-# print(r.read().decode('GB2312'))
+checkUrl = 'http://202.199.96.30/ACTIONLOGON.APPPROCESS'
+resp = session.post(checkUrl,  headers = header, cookies = cookie, data=data)
+data = {
+    "mode":2,
+    "YearTermNO":"1"+sys.argv[3]
+}
+resp = session.post("http://202.199.96.30/ACTIONQUERYSTUDENTSCORE.APPPROCESS", cookies = cookie, data=data)
+# print(resp.text)
+soup = BeautifulSoup(resp.text, "lxml")
+table = soup.find_all('table', class_="tableborder")[0]
+tr = table.find_all('tr')
+res = {}
+for x in tr:
+    td = x.find_all('td')
+    if td[2].get_text():
+        res[td[1].get_text()]=td[2].get_text()+'('+td[5].get_text()+')'+td[11].get_text()
+print(json.dumps(res))

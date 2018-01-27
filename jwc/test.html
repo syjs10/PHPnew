@@ -1,2 +1,852 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">\r\n\r\n\r\n\r\n<html>\r\n<head>\r\n<title>Untitled Document</title>\r\n\r\n<link href="css/css.css" rel=stylesheet>\r\n<meta http-equiv="Content-Type" content="text/html; charset=gb2312">\r\n<script language="JavaScript">\r\nfunction Judge(){\r\n\tvar WebUserNO,user_pw\r\n\tWebUserNO=document.all["WebUserNO"].value;\r\n\tif(WebUserNO=="")\r\n\t   {alert("\xb5\xc7\xc2\xbc\xd3\xc3\xbb\xa7\xb2\xbb\xc4\xdc\xce\xaa\xbf\xd5\xa3\xa1");\r\n\t   document.all["WebUserNO"] .focus();\r\n\t   return false;\r\n\t   }\r\n}\r\n</script>\r\n</head>\r\n<body bgcolor="#F8F8F8" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0">\r\n<form name="LoginForm" method="post" action="ACTIONLOGON.APPPROCESS?mode=4">\r\n<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">\r\n  <tr>\r\n    <td align="center" valign="middle" background="images/backGround.gif">\r\n  <table width="80%" border="0" cellpadding="0" cellspacing="0">\r\n          <tr> \r\n      <td width="40%" align="right" nowrap>\xd3\xc3\xbb\xa7\xc3\xfb:</td>\r\n      <td width="60%"> \r\n        <input name="WebUserNO" type="text" id="WebUserNO" style="width:80%">\r\n      </td>\r\n    </tr>\r\n    <tr> \r\n      <td align="right" nowrap>\xc3\xdc&nbsp;&nbsp;\xc2\xeb:</td>\r\n      <td><input name="Password" type="password" id="Password" style="width:80%"></td>\r\n    </tr>\r\n    <tr> \r\n      <td align="right" nowrap>\xb8\xbd\xbc\xd3\xc2\xeb:</td>\r\n      <td><input name="Agnomen" type="text" id="Agnomen" size="10"><img src="ACTIONVALIDATERANDOMPICTURE.APPPROCESS" width="60" height="20"></td>\r\n    </tr>\r\n          <tr align="center" valign="bottom"> \r\n            <td height="25" colspan="2" nowrap> \r\n              <table width="100" border="0" cellspacing="0" cellpadding="0">\r\n          <tr>\r\n            <td align="left"><input type="image" border="0" name="submit" src="User_JSP/images/MiniLogon.gif" width="44" height="19" onClick="javascript:return Judge();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            <a href="ACTIONRETRIEVEPASSWORD.APPPROCESS" target="_blank"><img src="User_JSP/images/RetrievePassword.gif" width="80" height="19" border="0"></a></td>\r\n            <td align="right"></td>\r\n          </tr>\r\n        </table></td>\r\n    </tr>\r\n  </table>\r\n\t</td>\r\n  </tr>\r\n</table>\r\n</form>\t\t\r\n</body>\r\n</html>\r\n<script language="JavaScript">\r\n \r\n  alert("\xc7\xeb\xca\xe4\xc8\xeb\xd5\xfd\xc8\xb7\xb5\xc4\xb8\xbd\xbc\xd3\xc2\xeb<br>");\r\n \r\n</script>\r\n'
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">\r\n\r\n\r\n\r\n<html>\r\n<head>\r\n<title>Untitled Document</title>\r\n\r\n<link href="css/css.css" rel=stylesheet>\r\n<meta http-equiv="Content-Type" content="text/html; charset=gb2312">\r\n<script language="JavaScript">\r\nfunction Judge(){\r\n\tvar WebUserNO,user_pw\r\n\tWebUserNO=document.all["WebUserNO"].value;\r\n\tif(WebUserNO=="")\r\n\t   {alert("\xb5\xc7\xc2\xbc\xd3\xc3\xbb\xa7\xb2\xbb\xc4\xdc\xce\xaa\xbf\xd5\xa3\xa1");\r\n\t   document.all["WebUserNO"] .focus();\r\n\t   return false;\r\n\t   }\r\n}\r\n</script>\r\n</head>\r\n<body bgcolor="#F8F8F8" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0">\r\n<form name="LoginForm" method="post" action="ACTIONLOGON.APPPROCESS?mode=4">\r\n<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">\r\n  <tr>\r\n    <td align="center" valign="middle" background="images/backGround.gif">\r\n  <table width="80%" border="0" cellpadding="0" cellspacing="0">\r\n          <tr> \r\n      <td width="40%" align="right" nowrap>\xd3\xc3\xbb\xa7\xc3\xfb:</td>\r\n      <td width="60%"> \r\n        <input name="WebUserNO" type="text" id="WebUserNO" style="width:80%">\r\n      </td>\r\n    </tr>\r\n    <tr> \r\n      <td align="right" nowrap>\xc3\xdc&nbsp;&nbsp;\xc2\xeb:</td>\r\n      <td><input name="Password" type="password" id="Password" style="width:80%"></td>\r\n    </tr>\r\n    <tr> \r\n      <td align="right" nowrap>\xb8\xbd\xbc\xd3\xc2\xeb:</td>\r\n      <td><input name="Agnomen" type="text" id="Agnomen" size="10"><img src="ACTIONVALIDATERANDOMPICTURE.APPPROCESS" width="60" height="20"></td>\r\n    </tr>\r\n          <tr align="center" valign="bottom"> \r\n            <td height="25" colspan="2" nowrap> \r\n              <table width="100" border="0" cellspacing="0" cellpadding="0">\r\n          <tr>\r\n            <td align="left"><input type="image" border="0" name="submit" src="User_JSP/images/MiniLogon.gif" width="44" height="19" onClick="javascript:return Judge();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n            <a href="ACTIONRETRIEVEPASSWORD.APPPROCESS" target="_blank"><img src="User_JSP/images/RetrievePassword.gif" width="80" height="19" border="0"></a></td>\r\n            <td align="right"></td>\r\n          </tr>\r\n        </table></td>\r\n    </tr>\r\n  </table>\r\n\t</td>\r\n  </tr>\r\n</table>\r\n</form>\t\t\r\n</body>\r\n</html>\r\n<script language="JavaScript">\r\n \r\n  alert("\xc7\xeb\xca\xe4\xc8\xeb\xd5\xfd\xc8\xb7\xb5\xc4\xb8\xbd\xbc\xd3\xc2\xeb<br>");\r\n \r\n</script>\r\n'
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <title>沈阳工业大学 学生成绩打印
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <style type="text/css">
+    body {
+        font-family: 宋体;
+        font-size: 12px
+    }
+
+    th {
+        font-family: 宋体;
+        font-size: 12px
+    }
+
+    td {
+        font-family: 宋体;
+        font-size: 12px
+    }
+
+    .tableborder {
+        border: 1px solid #003063;
+    }
+    </style>
+</head>
+
+<body bottommargin="0" leftmargin="0" rightmargin="0" topmargin="0">
+    <style media="print">
+    .Noprint {
+        display: none;
+    }
+
+    .PageNext {
+        page-break-after: always;
+    }
+    </style>
+    <object classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height="0" id="WebBrowser" width="0"></object>
+    <script language="JavaScript">
+    function doSaveas() {
+        try {
+            document.all.WebBrowser.ExecWB(4, 1);
+        } catch (e) {}
+    }
+
+    function doPrintSetup() {
+        try {
+            document.all.WebBrowser.ExecWB(8, 1);
+        } catch (e) {
+            alert("您的浏览器版本不支持网页打印设置");
+        }
+    }
+
+    function doPrintPreview() {
+        try {
+            document.all.WebBrowser.ExecWB(7, 1);
+        } catch (e) {
+            alert("您的浏览器版本不支持网页打印预览");
+        }
+    }
+
+    function doPrint() {
+        window.print();
+    }
+    </script>
+    <table border="0" cellpadding="0" cellspacing="0" class="Noprint" id="PrintControl" width="100%">
+        <tr>
+            <td align="right">
+                <table border="0" cellpadding="0" cellspacing="0" width="600">
+                    <tr align="center">
+                        <td width="20%"> </td>
+                        <td width="20%">
+                            <input id="bt_Saveas" name="bt_Saveas" onclick="doSaveas()" type="button" value=" 另 存 " />
+                        </td>
+                        <td width="20%">
+                            <input id="bt_Setup" name="bt_Setup" onclick="doPrintSetup()" type="button" value="打印设置" />
+                        </td>
+                        <td width="20%">
+                            <input id="bt_Priview" name="bt_Priview" onclick="doPrintPreview()" type="button" value="打印预览" />
+                        </td>
+                        <td width="20%">
+                            <input id="bt_Print" name="bt_Print" onclick="doPrint()" type="button" value=" 打 印 " />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size:14px">
+                如果上方的按钮不能正常工作请用IE浏览器自身的打印设置功能设置为:
+                <br/> A4纸、纵向(横向)打印上下左右边距均为10毫米、并清空页眉页脚的内容
+            </td>
+        </tr>
+    </table>
+    <hr align="center" class="Noprint" noshade="" size="1" width="90%" />
+    <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" height="20" valign="top">
+                <font size="3"><strong>
+      沈阳工业大学
+
+
+      学生学期成绩表</strong></font>
+            </td>
+        </tr>
+        <tr>
+            <td height="30">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td width="33%">院系:信息科学与工程学院</td>
+                        <td width="33%">专业:电子信息工程</td>
+                        <td width="33%">班级:电子信息1503班</td>
+                    </tr>
+                    <tr>
+                        <td width="33%">学号:150402305</td>
+                        <td width="33%">姓名:蒋松</td>
+                        <td width="33%"> </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table align="left" border="1" bordercolor="#000000" cellspacing="0" class="tableborder" style="BORDER-COLLAPSE:collapse" width="100%">
+                    <tr>
+                        <td align="center" height="20" nowrap=""> 学期 </td>
+                        <td align="center" height="20" nowrap=""> 课程号 </td>
+                        <td align="center" height="20" nowrap=""> 课程名 </td>
+                        <td align="center" nowrap="">开课模式</td>
+                        <td align="center" nowrap="">学时</td>
+                        <td align="center" nowrap="">学分</td>
+                        <td align="center" nowrap="">成绩类型</td>
+                        <td align="center">平时成绩</td>
+                        <td align="center">期中成绩</td>
+                        <td align="center">期末成绩</td>
+                        <td align="center">加分成绩</td>
+                        <td align="center" nowrap="">总成绩</td>
+                        <td align="center" nowrap="">绩点</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">sx039111</td>
+                        <td align="left" height="20">电子工艺实习</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">0</td>
+                        <td align="center" height="20" nowrap="">1</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">及格</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">及格</td>
+                        <td align="center" height="20" nowrap="">2</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">sx038111</td>
+                        <td align="left" height="20">电工工艺实习</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">0</td>
+                        <td align="center" height="20" nowrap="">1</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">中</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">中</td>
+                        <td align="center" height="20" nowrap="">4</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">08163111</td>
+                        <td align="left" height="20">电子线路CAD</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">32</td>
+                        <td align="center" height="20" nowrap="">2</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap="">优</td>
+                        <td align="center" height="20" nowrap="">优</td>
+                        <td align="center" height="20" nowrap="">优</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">优</td>
+                        <td align="center" height="20" nowrap="">8</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">sk1028111</td>
+                        <td align="left" height="20">电子线路CAD课程设计</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">0</td>
+                        <td align="center" height="20" nowrap="">1</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">优</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">优</td>
+                        <td align="center" height="20" nowrap="">8</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">05058111</td>
+                        <td align="left" height="20">科技外语</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">16</td>
+                        <td align="center" height="20" nowrap="">1</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">良</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">良</td>
+                        <td align="center" height="20" nowrap="">6</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">08356111</td>
+                        <td align="left" height="20">可编程逻辑器件与数字系统设计</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">32</td>
+                        <td align="center" height="20" nowrap="">2</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">优</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">优</td>
+                        <td align="center" height="20" nowrap="">8</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">08155211</td>
+                        <td align="left" height="20">电子测量技术</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">48</td>
+                        <td align="center" height="20" nowrap="">3</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap="">36</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">74</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">81</td>
+                        <td align="center" height="20" nowrap="">6.2</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">08105111</td>
+                        <td align="left" height="20">单片机原理及应用</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">56</td>
+                        <td align="center" height="20" nowrap="">3.5</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap="">10</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">76</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">79</td>
+                        <td align="center" height="20" nowrap="">5.8</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">08443211</td>
+                        <td align="left" height="20">数字信号处理</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">56</td>
+                        <td align="center" height="20" nowrap="">3.5</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap="">44.5</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">73</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">75</td>
+                        <td align="center" height="20" nowrap="">5</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap="">2017-2018学年第一学期</td>
+                        <td align="left" height="20" nowrap="">08181111</td>
+                        <td align="left" height="20">感测技术</td>
+                        <td align="center" height="20" nowrap="">必修课</td>
+                        <td align="center" height="20" nowrap="">48</td>
+                        <td align="center" height="20" nowrap="">3</td>
+                        <td align="center" height="20" nowrap="">期末考试</td>
+                        <td align="center" height="20" nowrap="">18</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">71.5</td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap="">76</td>
+                        <td align="center" height="20" nowrap="">5.2</td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="left" height="20" nowrap=""></td>
+                        <td align="left" height="20"></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                        <td align="center" height="20" nowrap=""></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" height="30" valign="bottom">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="right" width="40">第</td>
+                        <td align="center" width="40">1</td>
+                        <td width="30">页</td>
+                        <td align="right" width="30">共</td>
+                        <td align="center" width="40">1</td>
+                        <td width="40">页</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
