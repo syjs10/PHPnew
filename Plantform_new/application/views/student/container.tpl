@@ -29,8 +29,8 @@
                     <div class="panel-heading">操作</div>
                     <div class="panel-body">
                         <div class="list-group">
-                            <a href="javascript:void(0);" class="list-group-item" onclick="changePage('{$base_url}course/showTeacherCourse')">我的课程</a>
-                            <a href="javascript:void(0);" class="list-group-item" onclick="changePage('{$base_url}teacher/addCourse')">添加课程</a>
+                            <a href="javascript:void(0);" class="list-group-item" onclick="changePage('{$base_url}course/showStudentCourse')">我的课程</a>
+                            {* <a href="javascript:void(0);" class="list-group-item" onclick="changePage('{$base_url}teacher/addCourse')">添加课程</a> *}
                         </div>
                     </div>
                 </div>
