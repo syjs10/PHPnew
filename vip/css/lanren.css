@@ -1,0 +1,14 @@
+#floatDivBoxs{width:180px;background:#fff;position:fixed;top:100px;right:-180px;z-index:999;}
+#floatDivBoxs .floatDtt{width:100%;height:45px;line-height:45px; background:#f08326;color:#fff;font-size:18px;text-indent:22px;position:relative;}
+#floatDivBoxs .floatDqq{padding:0px 20px;}
+#floatDivBoxs .floatDqq li{height:40px;line-height:40px;font-size:20px;border-bottom:1px solid #e3e3e3; text-align:right}
+#floatDivBoxs .floatDqq li img{ float:left; margin-top:0px;}
+#floatDivBoxs .floatDtxt{font-size:15px;color:#333;padding:3px 4px;}
+#floatDivBoxs .floatDtel{padding:5px;}
+#floatDivBoxs .floatImg{text-align:center;padding:0px;background:#EBEBEB;}
+#floatDivBoxs .floatImg img{ margin-bottom:0px;}
+#floatDivBoxs .floatDtel img{display:block;}
+#floatDivBoxs .floatDbg{width:100%;height:20px;background:url(../images/online_botbg.jpg) no-repeat;box-shadow:-2px 0 3px rgba(0,0,0,0.25);}
+.floatShadow{ background:#fff;box-shadow:-2px 0 3px rgba(0,0,0,0.25);}
+#rightArrow{width:50px;height:45px;background:url(../images/online_arrow.jpg) no-repeat;position:fixed;top:100px;right:0;z-index:999;}
+#rightArrow a{display:block;height:45px;}
