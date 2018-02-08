@@ -122,6 +122,7 @@
             }
             header('Content-Type:application/json;charset=utf-8');
             if ($code != 204) {
+                $array = ['article'=>$array];
                 echo json_encode($array, JSON_UNESCAPED_UNICODE);
             }
             exit ();
