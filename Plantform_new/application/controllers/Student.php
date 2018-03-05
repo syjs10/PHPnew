@@ -109,6 +109,48 @@ class Student extends CI_Controller
             exit();
         }
     }
+
+    /**
+     * 显示页面专用方法
+     * @return [type] [description]
+     */
+    private function _display($page)
+    {
+        if (!$this->_isLogin()) {
+            echo "<script>alert('请先登录');</script>";
+            $this->_jumpTo('login');
+            exit();
+        }
+        $this->assign('user', '学生');
+        $this->assign('studentName', $this->session->userdata('studentName'));
+        $this->display("student/{$page}.html");
+    }
+    /**
+     * 显示课程
+     * @param  [arr] $courseInfo 输入课程内容
+     * @return [type] [description]
+     */
+    public function showCourseByInput($courseInfo)
+    {
+        foreach ($courseInfo as $key => $value) {
+            $courseInfo[$key]['img_path'] = base_url("../src/img/{$value['img_path']}");
+            if (mb_strlen($value['course_introduction']) >= 38) {
+                $courseInfo[$key]['course_introduction'] = mb_substr($value['course_introduction'], 0, 38) . "...";
+            }
+        }
+        $this->assign('courseInfo', $courseInfo);
+        $this->display('course/index.html');
+    }
+    /**
+     * 选课模块
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
+    public function chooseCourse($id)
+    {
+        // echo $_SESSION['studentId'];
+        var_dump($this->courseModel->chooseCourse(1, 2));
+    }
     /**
      * 显示主页
      * @return [type] [description]
@@ -126,24 +168,18 @@ class Student extends CI_Controller
         $this->_display('showCourse');
     }
     /**
-     * 显示页面专用方法
-     * @return [type] [description]
+     * 显示学生已选课程
+     * @param  string $value [description]
+     * @return [type]        [description]
      */
-    private function _display($page)
+    public function showChooseCourse($id)
     {
         if (!$this->_isLogin()) {
             echo "<script>alert('请先登录');</script>";
             $this->_jumpTo('login');
             exit();
         }
-        $this->assign('user', '学生');
-        $this->assign('studentName', $this->session->userdata('studentName'));
-        $this->display("student/{$page}.html");
-    }
-    public function chooseCourse($id)
-    {
-        // echo $_SESSION['studentId'];
-        var_dump($this->courseModel->chooseCourse(1, 1));
+        $this->showCourseByInput($this->courseModel->getChooseCourse(1));
     }
 
 }
