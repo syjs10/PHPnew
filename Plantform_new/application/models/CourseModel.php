@@ -41,7 +41,7 @@ class CourseModel extends CI_Model
     }
     public function getOneCourse($courseId)
     {
-        $sql = "SELECT course_id, course_name, course_introduction, img_path, teacher_name
+        $sql = "SELECT course_id, course_name, course_introduction, exp_num, img_path, teacher_name
                     FROM course cs
                     JOIN teacher tr
                     ON cs.teacher_id = tr.teacher_id
@@ -74,8 +74,9 @@ class CourseModel extends CI_Model
      */
     public function chooseCourse($student_id, $course_id)
     {
-        $sql = "SELECT * FROM choose_course WHERE student_id = ? AND course_id = ?";
-        $num = $this->db->query($sql, array($student_id, $course_id))->num_rows();
+        $sql   = "SELECT * FROM choose_course WHERE student_id = ? AND course_id = ?";
+        $query = $this->db->query($sql, array($student_id, $course_id));
+        $num   = $query->num_rows();
         if ($num < 1) {
             $sql = "INSERT INTO choose_course (student_id, course_id) values (?, ?)";
             if ($this->db->query($sql, array($student_id, $course_id))) {
@@ -87,6 +88,45 @@ class CourseModel extends CI_Model
             return '选课失败';
         }
 
+    }
+    /**
+     * 获取学习进度
+     * @param string $value [description]
+     */
+    public function getProgress($student_id, $course_id)
+    {
+        $sql = "SELECT * FROM choose_course WHERE student_id = ? AND course_id = ?";
+        $res = $this->db->query($sql, array($student_id, $course_id));
+        if ($res->num_rows()) {
+            $res = $res->result_array()[0];
+            return (int) $res['complete_exp_num'];
+        } else {
+            return -1;
+        }
+
+    }
+    /**
+     * 记录学习进度
+     * @param string $value [description]
+     */
+    public function recordProgress($student_id, $course_id, $exp_num)
+    {
+        $sql = "SELECT * FROM choose_course WHERE student_id = ? AND course_id = ?";
+        $res = $this->db->query($sql, array($student_id, $course_id));
+        if ($res->num_rows()) {
+            # code...
+            $res = (int) $res->result_array()[0]['complete_exp_num'];
+        } else {
+            $res = 0;
+        }
+        if ($res < $exp_num) {
+            // if ($res['complete_exp_num'] - $exp_num == 1) {
+            $sql = "UPDATE choose_course SET complete_exp_num = ? WHERE student_id = ? AND course_id = ?";
+            $this->db->query($sql, array($exp_num, $student_id, $course_id));
+            // } else {
+            // return '上节课未完成';
+            // }
+        }
     }
     /**
      * 显示已选课程

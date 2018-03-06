@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-05 15:09:54
+/* Smarty version 3.1.30, created on 2018-03-06 19:07:53
   from "/var/www/html/Plantform_new/application/views/course/showExperiment.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59feb942f1ff97_93420564',
+  'unifunc' => 'content_5a9e76897aa741_03694073',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,23 +21,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_59feb942f1ff97_93420564 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a9e76897aa741_03694073 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_119704566159feb942ef75e1_23342928', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19207887915a9e76897a5274_48365044', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_55209237359feb942f1cb37_60108457', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_205215465a9e76897a9e12_47539821', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'head'} */
-class Block_119704566159feb942ef75e1_23342928 extends Smarty_Internal_Block
+class Block_19207887915a9e76897a5274_48365044 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -58,7 +58,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_55209237359feb942f1cb37_60108457 extends Smarty_Internal_Block
+class Block_205215465a9e76897a9e12_47539821 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

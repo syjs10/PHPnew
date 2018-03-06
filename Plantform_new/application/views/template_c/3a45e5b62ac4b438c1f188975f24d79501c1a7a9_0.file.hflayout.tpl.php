@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-05 15:24:08
+/* Smarty version 3.1.30, created on 2018-03-06 19:03:44
   from "/var/www/html/Plantform_new/application/views/teacher/hflayout.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59febc988097b1_57406941',
+  'unifunc' => 'content_5a9e75901481b9_06658283',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,28 +21,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_59febc988097b1_57406941 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a9e75901481b9_06658283 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_57022841859febc987f7d03_35954633', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8841363815a9e759012ac46_23338232', 'head');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_30896940159febc98803ed1_40445348', 'header');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8548624975a9e759013d157_18332294', 'header');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_181971152259febc988084c5_59843026', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8214901545a9e75901460d5_90046664', 'footer');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'head'} */
-class Block_57022841859febc987f7d03_35954633 extends Smarty_Internal_Block
+class Block_8841363815a9e759012ac46_23338232 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -57,7 +57,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'header'} */
-class Block_30896940159febc98803ed1_40445348 extends Smarty_Internal_Block
+class Block_8548624975a9e759013d157_18332294 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -102,7 +102,7 @@ teacher/showCourse">课程管理</a></li>
 }
 /* {/block 'header'} */
 /* {block 'footer'} */
-class Block_181971152259febc988084c5_59843026 extends Smarty_Internal_Block
+class Block_8214901545a9e75901460d5_90046664 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

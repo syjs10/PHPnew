@@ -73,12 +73,15 @@ class Course extends CI_Controller
      */
     public function courseInfo($courseId)
     {
+        $complete_exp_num       = $this->courseModel->getProgress($this->session->userdata('studentId'), $courseId);
         $courseInfo             = $this->courseModel->getOneCourse($courseId);
         $courseInfo['img_path'] = base_url("../src/img/{$courseInfo['img_path']}");
         $expInfo                = $this->experimentModel->getExpByCouresId($courseId);
         foreach ($expInfo as $key => $value) {
             $expInfo[$key]['exp_doc_path'] = base_url("../src/doc/{$value['exp_doc_path']}");
+            $expInfo[$key]['exp_num']      = (int) ($expInfo[$key]['exp_num']);
         }
+        $courseInfo = array_merge($courseInfo, array('complete_exp_num' => (int) $complete_exp_num));
         $this->assign('expInfo', $expInfo);
         $this->assign('courseInfo', $courseInfo);
         $this->display('course/course.html');

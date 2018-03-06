@@ -60,7 +60,8 @@ class ExperimentModel extends CI_Model
         );
         // $this->db->trans_start();
         $this->db->insert('experiment', $data);
-        $sql = "UPDATE course set exp_num = exp_num+1 WHERE course_id = ?";
+        //课程记录实验数
+        $sql = "UPDATE course SET exp_num = exp_num+1 WHERE course_id = ?";
         $res = $this->db->query($sql, array($this->input->post('course_id')));
         // $this->db->trans_complete();
         return $res;

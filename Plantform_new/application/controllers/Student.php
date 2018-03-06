@@ -148,8 +148,7 @@ class Student extends CI_Controller
      */
     public function chooseCourse($id)
     {
-        // echo $_SESSION['studentId'];
-        var_dump($this->courseModel->chooseCourse(1, 2));
+        var_dump($this->courseModel->chooseCourse($this->session->userdata('studentId'), $id));
     }
     /**
      * 显示主页

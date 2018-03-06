@@ -46,7 +46,7 @@ CREATE TABLE choose_course(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	student_id INT NOT NULL,
 	course_id INT NOT NULL,
-	complete_exp_num INT(4) NOT NULL,
+	complete_exp_num INT(4) NOT NULL DEFAULT 1,
 	FOREIGN KEY (course_id) REFERENCES course(course_id),
 	FOREIGN KEY (student_id) REFERENCES student(student_id)
 
