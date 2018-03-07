@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-03-06 19:22:56
+/* Smarty version 3.1.30, created on 2018-03-07 21:49:27
   from "/var/www/html/Plantform_new/application/views/course/course.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a9e7a1028d560_03314165',
+  'unifunc' => 'content_5a9fede7d2ab68_01613431',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e7d11fdf88b16643bac8d41b04591f27b12bdb73' => 
     array (
       0 => '/var/www/html/Plantform_new/application/views/course/course.html',
-      1 => 1520335373,
+      1 => 1520430564,
       2 => 'file',
     ),
   ),
@@ -21,23 +21,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a9e7a1028d560_03314165 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a9fede7d2ab68_01613431 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_205070385a9e7a10242df8_67382684', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4281112905a9fede7bb3207_70476322', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18143179395a9e7a1028c239_27445286', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5918890885a9fede7d28e65_29530229', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'head'} */
-class Block_205070385a9e7a10242df8_67382684 extends Smarty_Internal_Block
+class Block_4281112905a9fede7bb3207_70476322 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -49,7 +49,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_18143179395a9e7a1028c239_27445286 extends Smarty_Internal_Block
+class Block_5918890885a9fede7d28e65_29530229 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -75,9 +75,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 </div>
             </div>
 
-                <div class="progress">
 
-                </div>
+
                 <?php if (isset($_COOKIE['studentName'])) {?>
                     <?php if ($_smarty_tpl->tpl_vars['courseInfo']->value['complete_exp_num'] <= 0 || $_smarty_tpl->tpl_vars['courseInfo']->value['exp_num'] == 0) {?>
                         <button type="" class="btn btn-success" style="margin-top: 10px;" onclick="location.href='<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
@@ -85,11 +84,13 @@ student/chooseCourse/<?php echo $_smarty_tpl->tpl_vars['courseInfo']->value['cou
 '">开始学习</button>
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['courseInfo']->value['complete_exp_num'] > 0 && $_smarty_tpl->tpl_vars['courseInfo']->value['exp_num'] != 0) {?>
+                    <div class="progress">
                         <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: <?php echo round(($_smarty_tpl->tpl_vars['courseInfo']->value['complete_exp_num']/$_smarty_tpl->tpl_vars['courseInfo']->value['exp_num']*100));?>
 %;">
                             <?php echo round(($_smarty_tpl->tpl_vars['courseInfo']->value['complete_exp_num']/$_smarty_tpl->tpl_vars['courseInfo']->value['exp_num']*100));?>
 %
                         </div>
+                    </div>
                     <?php }?>
                 <?php }?>
                 <?php if (isset($_COOKIE['teacherName']) && $_smarty_tpl->tpl_vars['courseInfo']->value['teacher_name'] == $_SESSION['teacherName']) {?>
