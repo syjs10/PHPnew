@@ -23,15 +23,6 @@
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="{$base_url}student/showCourse">课程</a></li>
-                {* <li><a href="">学生管理</a></li> *}
-                {* <li><a href="{{ base_url }}Department/index">首页</a></li>
-                <p class="navbar-text" style="color:#ccc;">面试阶段</p>
-                <li><a href="{{ base_url }}Department/interview">已报名人员</a></li>
-                <p class="navbar-text" style="color:#ccc;">选人阶段</p>
-                <li><a href="{{ base_url }}Department/choose">已面试人员</a></li>
-                <li><a href="{{ base_url }}Department/getConflictStu">冲突人员</a></li>
-                <li><a href="{{ base_url }}Department/getHiredStu">已选人员</a></li>
-                <li><a href="{{ base_url }}Department/getUnhiredStu">未选人员</a></li> *}
 
             </ul>
             <ul class="nav navbar-nav navbar-right">

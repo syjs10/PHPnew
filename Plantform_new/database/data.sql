@@ -9,6 +9,11 @@ CREATE TABLE teacher(
 	teacher_name VARCHAR(12) NOT NULL
 
 ) ENGINE=INNODB;
+CREATE TABLE admin(
+	admin_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(20) NOT NULL,
+	password VARCHAR(32) NOT NULL
+) ENGINE=INNODB;
 CREATE TABLE course(
 	course_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	course_name VARCHAR(50) NOT NULL,
@@ -28,7 +33,8 @@ CREATE TABLE experiment(
 ) ENGINE=INNODB;
 -- INSERT INTO teacher (username, password, teacher_name)
 -- 	VALUES ('test', '098f6bcd4621d373cade4e832627b4f6', 'min');
-
+INSERT INTO admin (username, password)
+	VALUES ('test', '098f6bcd4621d373cade4e832627b4f6');
 CREATE TABLE student(
 	student_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	student_name VARCHAR(16) NOT NULL,

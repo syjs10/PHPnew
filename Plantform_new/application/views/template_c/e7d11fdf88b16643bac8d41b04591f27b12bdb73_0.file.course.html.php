@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-03-07 21:49:27
+/* Smarty version 3.1.30, created on 2018-03-08 19:35:29
   from "/var/www/html/Plantform_new/application/views/course/course.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a9fede7d2ab68_01613431',
+  'unifunc' => 'content_5aa12001082b41_01169519',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e7d11fdf88b16643bac8d41b04591f27b12bdb73' => 
     array (
       0 => '/var/www/html/Plantform_new/application/views/course/course.html',
-      1 => 1520430564,
+      1 => 1520508924,
       2 => 'file',
     ),
   ),
@@ -21,23 +21,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a9fede7d2ab68_01613431 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5aa12001082b41_01169519 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4281112905a9fede7bb3207_70476322', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10189984415aa12000f2da49_96612282', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5918890885a9fede7d28e65_29530229', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7599647375aa12001080688_89901331', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'head'} */
-class Block_4281112905a9fede7bb3207_70476322 extends Smarty_Internal_Block
+class Block_10189984415aa12000f2da49_96612282 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -49,7 +49,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_5918890885a9fede7d28e65_29530229 extends Smarty_Internal_Block
+class Block_7599647375aa12001080688_89901331 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -93,7 +93,7 @@ student/chooseCourse/<?php echo $_smarty_tpl->tpl_vars['courseInfo']->value['cou
                     </div>
                     <?php }?>
                 <?php }?>
-                <?php if (isset($_COOKIE['teacherName']) && $_smarty_tpl->tpl_vars['courseInfo']->value['teacher_name'] == $_SESSION['teacherName']) {?>
+                <?php if (isset($_COOKIE['teacherName']) && $_smarty_tpl->tpl_vars['courseInfo']->value['teacher_name'] == $_COOKIE['teacherName']) {?>
                     <button type="" class="btn btn-success" style="margin-top: 10px;" onclick="location.href='<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 teacher/addExperiment/<?php echo $_smarty_tpl->tpl_vars['courseInfo']->value['course_id'];?>
 '">添加实验</button>
@@ -116,17 +116,17 @@ foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
 
                                         <?php $_smarty_tpl->_assignInScope('temp', '');
 ?>
-                                        <?php if ($_smarty_tpl->tpl_vars['courseInfo']->value['complete_exp_num'] < $_smarty_tpl->tpl_vars['value']->value['exp_num']) {?>
+                                        <?php if ($_smarty_tpl->tpl_vars['courseInfo']->value['complete_exp_num']+1 < $_smarty_tpl->tpl_vars['value']->value['exp_num']) {?>
                                             <?php $_smarty_tpl->_assignInScope('temp', "disabled");
 ?>
                                         <?php }?>
 
                                         <button class="btn btn-primary <?php echo $_smarty_tpl->tpl_vars['temp']->value;?>
-" style="float:right; margin:auto 2px;"  onclick='location.href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+" style="float:right; margin:auto 2px;"  onclick='window.open("<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 Experiment/showExperiment/<?php echo $_smarty_tpl->tpl_vars['value']->value['exp_id'];?>
 /<?php echo $_smarty_tpl->tpl_vars['courseInfo']->value['course_id'];?>
 /<?php echo $_SESSION['studentId'];?>
-"'>开始实验</button>
+");'>开始实验</button>
                                     </li>
                                 <?php
 }

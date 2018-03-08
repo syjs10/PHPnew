@@ -74,6 +74,8 @@ class CourseModel extends CI_Model
      */
     public function chooseCourse($student_id, $course_id)
     {
+        $sql   = "SELECT * FROM exp_id WHERE student_id = ? AND course_id = ?";
+        $query = $this->db->query($sql, array($student_id, $course_id));
         $sql   = "SELECT * FROM choose_course WHERE student_id = ? AND course_id = ?";
         $query = $this->db->query($sql, array($student_id, $course_id));
         $num   = $query->num_rows();

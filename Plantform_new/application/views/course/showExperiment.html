@@ -10,6 +10,12 @@
 		height: 100%;
 		border:0px;
 	}
+	.btn{
+		position: fixed;
+	}
+	#doc{
+		margin-right: -10px;
+	}
 </style>
 {/block}
 
@@ -22,7 +28,7 @@
 		</div>
 		<div class="col-md-3 right_bar">
 			<button class="btn btn-success" onclick="location.href='{$base_url}docker/dockerDel'">关闭虚拟机</button>
-			<iframe src="{$expInfo['exp_doc_path']}" >
+			<iframe id = "doc" src="{$expInfo['exp_doc_path']}" >
 			</iframe>
 		</div>
 	</div>
