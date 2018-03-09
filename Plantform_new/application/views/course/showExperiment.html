@@ -16,6 +16,9 @@
 	#doc{
 		margin-right: -10px;
 	}
+	body{
+		overflow:hidden;
+	}
 </style>
 {/block}
 
@@ -24,11 +27,11 @@
 
 	<div class="row">
 		<div class="col-md-9" style="padding: 0px;">
-			<iframe src="{$base_url}docker/show_docker" id="noVNC"  onload="noVNC.focus()" scrolling="no"></iframe>
+			<iframe src="{$base_url}docker/show_docker" id="noVNC"  onload="noVNC.focus()" frameborder="0" scrolling="no"></iframe>
 		</div>
 		<div class="col-md-3 right_bar">
 			<button class="btn btn-success" onclick="location.href='{$base_url}docker/dockerDel'">关闭虚拟机</button>
-			<iframe id = "doc" src="{$expInfo['exp_doc_path']}" >
+			<iframe id = "doc" frameborder="0" scrolling="auto" src="{$expInfo['exp_doc_path']}" >
 			</iframe>
 		</div>
 	</div>

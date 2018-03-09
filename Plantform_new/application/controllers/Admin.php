@@ -112,4 +112,32 @@ class Admin extends CI_Controller
             exit();
         }
     }
+    /**
+     * 显示页面专用方法
+     * @return [type] [description]
+     */
+    private function _display($page)
+    {
+        if (!$this->_isLogin()) {
+            echo "<script>alert('请先登录');</script>";
+            $this->_jumpTo('login');
+            exit();
+        }
+        $this->assign('user', '管理员');
+        $this->assign('adminName', $this->session->userdata('adminName'));
+        $this->display("admin/{$page}.html");
+    }
+    /**
+     * 显示管理员主页
+     * @return [type] [description]
+     */
+    public function index()
+    {
+        $this->_display('optTeacher');
+    }
+    public function addTeacher()
+    {
+        $this->assign('form', form_open('teacher/doAddCourse', "enctype='multipart/form-data', class='form-horizontal'"));
+        $this->_display('addTeacher');
+    }
 }

@@ -22,7 +22,7 @@
         </div>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{$base_url}student/showCourse">课程</a></li>
+                <li><a href="{$base_url}admin/showCourse">教师管理</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">

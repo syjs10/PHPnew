@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-03-08 20:08:50
-  from "/var/www/html/Plantform_new/application/views/teacher/hflayout.tpl" */
+/* Smarty version 3.1.30, created on 2018-03-08 20:11:41
+  from "/var/www/html/Plantform_new/application/views/admin/hflayout.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5aa127d26a5605_33283122',
+  'unifunc' => 'content_5aa1287d8473b3_00007518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '3a45e5b62ac4b438c1f188975f24d79501c1a7a9' => 
+    '7c4d9a18ae58907d7a13deac77490a9fd17c2d7f' => 
     array (
-      0 => '/var/www/html/Plantform_new/application/views/teacher/hflayout.tpl',
-      1 => 1520500964,
+      0 => '/var/www/html/Plantform_new/application/views/admin/hflayout.tpl',
+      1 => 1520511097,
       2 => 'file',
     ),
   ),
@@ -21,28 +21,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5aa127d26a5605_33283122 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5aa1287d8473b3_00007518 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16475004615aa127d266df60_43743194', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10476301885aa1287d835e96_58416529', 'head');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4746900745aa127d26958f8_17436712', 'header');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17602817705aa1287d840c22_33470253', 'header');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11336610405aa127d26a29c7_67827156', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21085563445aa1287d845fe8_95268144', 'footer');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'head'} */
-class Block_16475004615aa127d266df60_43743194 extends Smarty_Internal_Block
+class Block_10476301885aa1287d835e96_58416529 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -57,7 +57,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'head'} */
 /* {block 'header'} */
-class Block_4746900745aa127d26958f8_17436712 extends Smarty_Internal_Block
+class Block_17602817705aa1287d840c22_33470253 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -73,7 +73,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-teacher/index"><?php echo $_smarty_tpl->tpl_vars['user']->value;?>
+admin/index"><?php echo $_smarty_tpl->tpl_vars['user']->value;?>
 页面</a>
         </div>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
@@ -85,8 +85,7 @@ teacher/showCourse">课程管理</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown ">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_smarty_tpl->tpl_vars['teacherName']->value;?>
- <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理员<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="">修改密码</a></li>
                         <li><a href="">退出登录</a></li>
@@ -101,7 +100,7 @@ teacher/showCourse">课程管理</a></li>
 }
 /* {/block 'header'} */
 /* {block 'footer'} */
-class Block_11336610405aa127d26a29c7_67827156 extends Smarty_Internal_Block
+class Block_21085563445aa1287d845fe8_95268144 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

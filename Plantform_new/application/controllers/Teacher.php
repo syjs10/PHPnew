@@ -152,9 +152,7 @@ class Teacher extends CI_Controller
     public function addCourse()
     {
         $this->assign('form', form_open('teacher/doAddCourse', "enctype='multipart/form-data', class='form-horizontal'"));
-        $this->assign('user', '教师');
-        $this->assign('teacherName', $this->session->userdata('teacherName'));
-        $this->display('teacher/addCourse.html');
+        $this->_display('addCourse.html');
     }
     /**
      * 添加课程
@@ -185,6 +183,11 @@ class Teacher extends CI_Controller
      */
     public function addExperiment($course_id)
     {
+        if (!$this->_isLogin()) {
+            echo "<script>alert('请先登录');</script>";
+            $this->_jumpTo('login');
+            exit();
+        }
         $this->assign('form', form_open('teacher/doAddExperiment', "enctype='multipart/form-data', class='form-horizontal'"));
         $this->assign('course_id', $course_id);
         $this->display('course/addExperiment.html');

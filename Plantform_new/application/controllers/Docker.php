@@ -2,8 +2,10 @@
 /**
  *  test Docker Class
  */
-class Docker extends CI_Controller{
-    function __construct(){
+class Docker extends CI_Controller
+{
+    public function __construct()
+    {
         parent::__construct();
         $this->load->library('session');
 
@@ -12,20 +14,21 @@ class Docker extends CI_Controller{
      * 查看已经打开的docker容器
      * @return [array] [id, port]
      */
-    public function docker_ps(){
+    public function docker_ps()
+    {
         $command = "docker ps";
         exec($command, $arr);
         $list = array();
-        $tp = array();
+        $tp   = array();
         foreach ($arr as $key => $value) {
-            if ($key==0){
+            if ($key == 0) {
                 continue;
             }
             $value = preg_replace('/\s+/', ' ', $value);
-            $tp = explode(' ', $value);
-            $port = explode(':', $tp[count($tp)-2]);
-            $port = explode('-', $port[1]);
-            $md = array('id' => $tp[0], 'port' => $port[0]);
+            $tp    = explode(' ', $value);
+            $port  = explode(':', $tp[count($tp) - 2]);
+            $port  = explode('-', $port[1]);
+            $md    = array('id' => $tp[0], 'port' => $port[0]);
             array_push($list, $md);
         }
         return $list;
@@ -35,10 +38,11 @@ class Docker extends CI_Controller{
      * @param  [int]  $port [port]
      * @return boolean
      */
-    public function is_repeat($port) {
+    public function is_repeat($port)
+    {
         $info = $this->docker_ps();
         foreach ($info as $key => $value) {
-            if ($value['port']==$port){
+            if ($value['port'] == $port) {
                 return true;
             }
         }
@@ -48,11 +52,12 @@ class Docker extends CI_Controller{
      * 创建docker而虚拟机
      *
      */
-    public function docker_create() {
+    public function docker_create()
+    {
         /**
          * 防止重复开启虚拟机
          */
-        if (isset($_SESSION['docker_info'])){
+        if (isset($_SESSION['docker_info'])) {
             return $_SESSION['docker_info']['port'];
             exit;
         }
@@ -60,20 +65,20 @@ class Docker extends CI_Controller{
          * 判断端口是否占用
          * @var [type]
          */
-        $port = rand(10000,60000);
-        while ($this->is_repeat($port)){
-            $port = rand(10000,60000);
+        $port = rand(10000, 60000);
+        while ($this->is_repeat($port)) {
+            $port = rand(10000, 60000);
         }
         // $command = "docker run -d -p ".$port.":80 dorowu/ubuntu-desktop-lxde-vnc";
-        $command = "docker run -d -p ".$port.":80 test:v1";
-        $output  = exec($command, $arr);
-        $output  = substr($output, 0, 12);
+        $command     = "docker run -d -p " . $port . ":80 test:v1";
+        $output      = exec($command, $arr);
+        $output      = substr($output, 0, 12);
         $docker_info = array(
             'id'   => $output,
             'port' => $port,
-            'time' => time()
+            'time' => time(),
         );
-        $_SESSION['docker_info']=$docker_info;
+        $_SESSION['docker_info'] = $docker_info;
         // var_dump($_SESSION['docker_info']);
         return $port;
     }
@@ -82,17 +87,18 @@ class Docker extends CI_Controller{
      * @param  [type] $length [description]
      * @return [type]         [description]
      */
-    public function timing($length){
-        ignore_user_abort();//关掉浏览器，PHP脚本也可以继续执行.
+    public function timing($length)
+    {
+        ignore_user_abort(); //关掉浏览器，PHP脚本也可以继续执行.
         set_time_limit(1);
-        do{
+        do {
             $time = $_SESSION['docker_info']['time'];
-            if(time()-$time == $length) {
+            if (time() - $time == $length) {
                 $this->docker_del();
                 return 0;
             }
             sleep(10);
-        } while(true);
+        } while (true);
     }
 
     /**
@@ -100,31 +106,33 @@ class Docker extends CI_Controller{
      * @param  [string] $id docker id号
      * @return [string]     docker id号，用于判定是否关闭成功
      */
-    public function dockerDel($id=NULL) {
+    public function dockerDel($id = null)
+    {
 
-        if($id != NULL){
+        if ($id != null) {
             $command = "docker kill {$id}";
         } else {
             $command = "docker kill {$_SESSION['docker_info']['id']}";
         }
 
         $output = exec($command);
-        if($id == NULL){
+        if ($id == null) {
 
-            if($output == $_SESSION['docker_info']['id']){
+            if ($output == $_SESSION['docker_info']['id']) {
                 unset($_SESSION['docker_info']);
-                echo "<script>history.go(-2);</script>";
-            }else{
+                echo "<script>window.close();</script>";
+            } else {
                 exit('docker close error');
             }
         } else {
             if ($output) {
-                echo "<script>history.go(-2);</script>";
+                echo "<script>window.close();</script>";
             }
         }
     }
 
-    public function show_docker(){
+    public function show_docker()
+    {
         $port = $this->docker_create();
         sleep(5);
         echo "<script>
@@ -133,5 +141,3 @@ class Docker extends CI_Controller{
         // echo exec('whoami');
     }
 }
-
-?>
