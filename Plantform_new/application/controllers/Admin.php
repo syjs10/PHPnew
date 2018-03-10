@@ -133,7 +133,23 @@ class Admin extends CI_Controller
      */
     public function index()
     {
+        $this->optTeacher();
+    }
+    /**
+     *  管理教师页面
+     * @return [type] [description]
+     */
+    public function optTeacher()
+    {
         $this->_display('optTeacher');
+    }
+    /**
+     *  管学生师页面
+     * @return [type] [description]
+     */
+    public function optStudent()
+    {
+        $this->_display('optStudent');
     }
     public function addTeacher()
     {

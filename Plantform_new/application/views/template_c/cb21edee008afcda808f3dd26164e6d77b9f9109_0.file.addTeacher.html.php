@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-03-08 20:19:56
+/* Smarty version 3.1.30, created on 2018-03-10 16:57:08
   from "/var/www/html/Plantform_new/application/views/admin/addTeacher.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5aa12a6c3d3985_62841147',
+  'unifunc' => 'content_5aa39de442b5f8_39347248',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cb21edee008afcda808f3dd26164e6d77b9f9109' => 
     array (
       0 => '/var/www/html/Plantform_new/application/views/admin/addTeacher.html',
-      1 => 1520511469,
+      1 => 1520672226,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5aa12a6c3d3985_62841147 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5aa39de442b5f8_39347248 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -29,12 +29,12 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15326203375aa12a6c3d2440_14940321', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9881490385aa39de4429c20_74682307', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_15326203375aa12a6c3d2440_14940321 extends Smarty_Internal_Block
+class Block_9881490385aa39de4429c20_74682307 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -46,16 +46,26 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 <?php echo $_smarty_tpl->tpl_vars['form']->value;?>
 
                     <div class="form-group form-group-sm">
-                        <label class="col-sm-2 control-label" for="course_name" >课程名称</label>
-                        <div class="col-sm-10">
+                        <label class="col-sm-3 control-label" for="course_name" >教师姓名</label>
+                        <div class="col-sm-7">
                             <input type="text" class="form-control" name="course_name">
                         </div>
-
                     </div>
-
                     <div class="form-group form-group-sm">
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-10">
+                        <label class="col-sm-3 control-label" for="course_name" >用户名</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="course_name">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label class="col-sm-3 control-label" for="course_name" >密&nbsp;&nbsp;码</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="course_name">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-7">
                             <input type="submit" class="btn btn-default" value="提交">
                         </div>
                     </div>
