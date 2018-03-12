@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-03-07 21:46:49
+/* Smarty version 3.1.30, created on 2018-03-12 12:35:46
   from "/var/www/html/Plantform_new/application/views/login/login.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a9fed49b4d248_33241662',
+  'unifunc' => 'content_5aa603a2cd9668_30433938',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '57610240f1b832bb8b80d9d1008d136e8a7c170c' => 
     array (
       0 => '/var/www/html/Plantform_new/application/views/login/login.html',
-      1 => 1507973397,
+      1 => 1520829265,
       2 => 'file',
     ),
   ),
@@ -21,27 +21,27 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a9fed49b4d248_33241662 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5aa603a2cd9668_30433938 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6447474475a9fed49b07269_55949699', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7673121585aa603a2cc1712_49318289', 'title');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15845286055a9fed49b1faf3_88653771', 'head');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19375567645aa603a2cc7872_68752400', 'head');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17418840955a9fed49b488c8_98002867', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18475210665aa603a2cd8272_55997379', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'title'} */
-class Block_6447474475a9fed49b07269_55949699 extends Smarty_Internal_Block
+class Block_7673121585aa603a2cc1712_49318289 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['user']->value;?>
@@ -50,7 +50,7 @@ echo $_smarty_tpl->tpl_vars['user']->value;?>
 }
 /* {/block 'title'} */
 /* {block 'head'} */
-class Block_15845286055a9fed49b1faf3_88653771 extends Smarty_Internal_Block
+class Block_19375567645aa603a2cc7872_68752400 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -62,7 +62,7 @@ lib/css/login.css">
 }
 /* {/block 'head'} */
 /* {block 'body'} */
-class Block_17418840955a9fed49b488c8_98002867 extends Smarty_Internal_Block
+class Block_18475210665aa603a2cd8272_55997379 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -85,14 +85,16 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                               <div class="form-group" >
                                     <label for="Username" class="col-md-3 col-sm-3 col-xs-3">用户名</label>
                                     <div class="col-md-9 col-sm-9 col-xs-9">
-                                          <input type="text" name="username" style=""class="form-control input" placeholder="UserName">
+                                          <input type="text" name="username" style=""class="form-control input" placeholder="UserName" value="<?php echo set_value('username');?>
+">
                                     </div>
 
                               </div>
                               <div class="form-group" >
                                     <label for="Password" class="col-md-3 col-ms-3 col-xs-3">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
                                     <div class="col-md-9 col-sm-9 col-xs-9">
-                                          <input type="password" name="password" style=""class="form-control input" placeholder="PassWord">
+                                          <input type="password" name="password" style=""class="form-control input" placeholder="PassWord" value="<?php echo set_value('password');?>
+">
                                     </div>
                               </div>
                               <div class="form-group" >

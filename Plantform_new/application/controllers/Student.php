@@ -90,22 +90,22 @@ class Student extends CI_Controller
                 set_cookie("studentName", $arr['student_name'], 60 * 60 * 24);
                 set_cookie("studentId", $arr['student_id'], 60 * 60 * 24);
                 if (!empty($arr)) {
-                    $this->_jumpTo('index');
+                    $this->_display('index');
                     exit();
                 } else {
                     echo "<script>alert('用户名密码错误');</script>";
-                    $this->_jumpTo('login');
+                    $this->_display('login');
                     exit();
                 }
 
             } else {
                 echo "<script>alert('验证码错误');</script>";
-                $this->_jumpTo('login');
+                $this->_display('login');
                 exit();
             }
         } else {
             echo "<script>alert('表单不能为空');</script>";
-            $this->_jumpTo('login');
+            $this->_display('login');
             exit();
         }
     }

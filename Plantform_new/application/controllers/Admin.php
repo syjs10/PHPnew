@@ -15,6 +15,7 @@ class Admin extends CI_Controller
         $this->load->library('form_validation');
         $this->load->library('session');
         $this->load->model('loginModel');
+        $this->load->model('teacherModel');
 
     }
     /**
@@ -153,7 +154,19 @@ class Admin extends CI_Controller
     }
     public function addTeacher()
     {
-        $this->assign('form', form_open('teacher/doAddCourse', "enctype='multipart/form-data', class='form-horizontal'"));
+        $this->assign('form', form_open('admin/doAddTeacher', "enctype='multipart/form-data', class='form-horizontal'"));
         $this->_display('addTeacher');
+    }
+    public function doAddTeacher()
+    {
+        $this->form_validation->set_rules('teacher_name', 'TeacehrName', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        if ($this->form_validation->run() == false) {
+            echo "<script>alert('请填全信息');</script>";
+            $this->addTeacher();
+        } else {
+            $this->teacherModel->addTeacher($this->input->post());
+        }
     }
 }
