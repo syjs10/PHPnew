@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">发送Ajax</button>
+    <div id="box"></div>
+</body>
+<script>
+    $("#btn").click(function(event) {
+        /* Act on the event */
+        $.get('demo1.php',{'username':"科学家"}, function(data) {
+            // $('#box').html(data);
+            alert(data);
+        })
+    });
+</script>
+</html>
