@@ -16,6 +16,7 @@ class Admin extends CI_Controller
         $this->load->library('session');
         $this->load->model('loginModel');
         $this->load->model('teacherModel');
+        $this->load->model('studentModel');
 
     }
     /**
@@ -152,21 +153,64 @@ class Admin extends CI_Controller
     {
         $this->_display('optStudent');
     }
+    /**
+     * 添加教师页面
+     */
     public function addTeacher()
     {
         $this->assign('form', form_open('admin/doAddTeacher', "enctype='multipart/form-data', class='form-horizontal'"));
         $this->_display('addTeacher');
     }
+    /**
+     * 添加学生页面
+     */
+    public function addStudent()
+    {
+        $this->assign('form', form_open('admin/doAddStudent', "enctype='multipart/form-data', class='form-horizontal'"));
+        $this->_display('addStudent');
+    }
+    /**
+     * 执行添加教师
+     * @return [type] [description]
+     */
     public function doAddTeacher()
     {
-        $this->form_validation->set_rules('teacher_name', 'TeacehrName', 'required');
+        $this->form_validation->set_rules('teacher_name', 'TeacherName', 'required');
         $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         if ($this->form_validation->run() == false) {
             echo "<script>alert('请填全信息');</script>";
             $this->addTeacher();
         } else {
-            $this->teacherModel->addTeacher($this->input->post());
+            $res = $this->teacherModel->addTeacher($this->input->post());
+            if ($res === true) {
+                echo '添加教师成功';
+            } else {
+                echo '添加教师失败';
+            }
+        }
+    }
+    /**
+     * 执行添加学生
+     * @return [type] [description]
+     */
+    public function doAddStudent()
+    {
+        $this->form_validation->set_rules('student_name', 'StudentName', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('student_class', 'Class', 'required');
+        $this->form_validation->set_rules('student_num', 'Number', 'required');
+        if ($this->form_validation->run() == false) {
+            echo "<script>alert('请填全信息');</script>";
+            $this->addStudent();
+        } else {
+            $res = $this->studentModel->addStudent($this->input->post());
+            if ($res === true) {
+                echo '添加学生成功';
+            } else {
+                echo '添加学生失败';
+            }
         }
     }
 }
