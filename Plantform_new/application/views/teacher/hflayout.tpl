@@ -24,7 +24,6 @@
             <ul class="nav navbar-nav">
                 <li><a href="{$base_url}teacher/showCourse">课程管理</a></li>
                 <li><a href="">学生管理</a></li>
-
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown ">

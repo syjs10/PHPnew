@@ -152,7 +152,7 @@ class Teacher extends CI_Controller
     public function addCourse()
     {
         $this->assign('form', form_open('teacher/doAddCourse', "enctype='multipart/form-data', class='form-horizontal'"));
-        $this->_display('addCourse.html');
+        $this->_display('addCourse');
     }
     /**
      * 添加课程

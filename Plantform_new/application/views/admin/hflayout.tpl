@@ -22,8 +22,8 @@
         </div>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{$base_url}teacher/showCourse">教师管理</a></li>
-                <li><a href="">学生管理</a></li>
+                <li><a href="{$base_url}admin/optTeacher">教师管理</a></li>
+                <li><a href="{$base_url}admin/optStudent">学生管理</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">

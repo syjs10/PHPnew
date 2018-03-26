@@ -15,7 +15,12 @@ class TeacherModel extends CI_Model
      */
     public function addTeacher($array)
     {
-        $sql               = "INSERT INTO teacher (teacher_username, username, password) VALUES (?, ?, ?);";
+        $sql               = "INSERT INTO teacher (teacher_name, username, password) VALUES (?, ?, ?);";
         $array['password'] = md5($array['password']);
+        if ($this->db->query($sql, $array)) {
+            return true;
+        } else {
+            return $this->db->error();
+        }
     }
 }

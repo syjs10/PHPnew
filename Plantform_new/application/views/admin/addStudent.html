@@ -1,0 +1,50 @@
+{extends file='../layout.tpl'}
+
+
+{block name=body}
+    <div class="panel panel-default">
+        <div class="panel-heading">添加教师</div>
+        <div class="panel-body">
+            <div class="container">
+                {$form}
+                    <div class="form-group form-group-sm">
+                        <label class="col-sm-3 control-label" for="student_name" >学生姓名</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="student_name" value="{'student_name'|set_value}">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label class="col-sm-3 control-label" for="username" >用户名</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="username" value="{'username'|set_value}">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label class="col-sm-3 control-label" for="password" >密&nbsp;&nbsp;码</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" name="password" value="{'password'|set_value}">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label class="col-sm-3 control-label" for="student_class" >班&nbsp;&nbsp;级</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="student_class" value="{'student_class'|set_value}">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label class="col-sm-3 control-label" for="student_num" >学&nbsp;&nbsp;号</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="student_num" value="{'student_num'|set_value}">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-7">
+                            <input type="submit" class="btn btn-default" value="提交">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{/block}
